@@ -1,0 +1,25 @@
+{
+  "id": "filament-translation-suite/configuration",
+  "title": "configuration",
+  "description": "Publishing the Config",
+  "source": "@site/docs/filament-translation-suite/configuration.md",
+  "sourceDirName": "filament-translation-suite",
+  "slug": "/filament-translation-suite/configuration",
+  "permalink": "/filament-translation-suite/configuration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/configuration.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "webhooks",
+    "permalink": "/filament-translation-suite/features/webhooks"
+  },
+  "next": {
+    "title": "getting-started",
+    "permalink": "/filament-translation-suite/getting-started"
+  }
+}

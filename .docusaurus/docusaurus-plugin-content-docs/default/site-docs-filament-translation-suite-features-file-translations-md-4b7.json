@@ -1,0 +1,25 @@
+{
+  "id": "filament-translation-suite/features/file-translations",
+  "title": "file-translations",
+  "description": "The Problem with File-Only Workflows",
+  "source": "@site/docs/filament-translation-suite/features/file-translations.md",
+  "sourceDirName": "filament-translation-suite/features",
+  "slug": "/filament-translation-suite/features/file-translations",
+  "permalink": "/filament-translation-suite/features/file-translations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/features/file-translations.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "csv-import-export",
+    "permalink": "/filament-translation-suite/features/csv-import-export"
+  },
+  "next": {
+    "title": "form-morphing",
+    "permalink": "/filament-translation-suite/features/form-morphing"
+  }
+}

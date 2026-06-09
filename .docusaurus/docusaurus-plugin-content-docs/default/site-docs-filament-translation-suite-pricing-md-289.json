@@ -1,0 +1,21 @@
+{
+  "id": "filament-translation-suite/pricing",
+  "title": "pricing",
+  "description": "SOLO",
+  "source": "@site/docs/filament-translation-suite/pricing.md",
+  "sourceDirName": "filament-translation-suite",
+  "slug": "/filament-translation-suite/pricing",
+  "permalink": "/filament-translation-suite/pricing",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/pricing.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "getting-started",
+    "permalink": "/filament-translation-suite/getting-started"
+  }
+}

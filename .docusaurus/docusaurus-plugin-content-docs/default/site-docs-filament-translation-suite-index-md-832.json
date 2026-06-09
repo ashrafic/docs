@@ -1,0 +1,21 @@
+{
+  "id": "filament-translation-suite/index",
+  "title": "index",
+  "description": "---",
+  "source": "@site/docs/filament-translation-suite/index.md",
+  "sourceDirName": "filament-translation-suite",
+  "slug": "/filament-translation-suite/",
+  "permalink": "/filament-translation-suite/",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/index.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "next": {
+    "title": "index",
+    "permalink": "/filament-translation-suite/features/"
+  }
+}

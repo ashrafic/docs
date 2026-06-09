@@ -1,0 +1,25 @@
+{
+  "id": "filament-translation-suite/features/webhooks",
+  "title": "webhooks",
+  "description": "Supported Platforms",
+  "source": "@site/docs/filament-translation-suite/features/webhooks.md",
+  "sourceDirName": "filament-translation-suite/features",
+  "slug": "/filament-translation-suite/features/webhooks",
+  "permalink": "/filament-translation-suite/features/webhooks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/features/webhooks.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "vendor-explorer",
+    "permalink": "/filament-translation-suite/features/vendor-explorer"
+  },
+  "next": {
+    "title": "configuration",
+    "permalink": "/filament-translation-suite/configuration"
+  }
+}

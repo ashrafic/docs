@@ -1,0 +1,133 @@
+{
+  "/__docusaurus/debug-5ff": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/config-5ba": {
+    "__comp": "__comp---theme-debug-config-23-a-2ff",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/content-a2b": {
+    "__comp": "__comp---theme-debug-contentba-8-ce7",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    },
+    "__props": "__props---docusaurus-debug-content-3-c-0-be2"
+  },
+  "/__docusaurus/debug/globalData-c3c": {
+    "__comp": "__comp---theme-debug-global-dataede-0fa",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/metadata-156": {
+    "__comp": "__comp---theme-debug-site-metadata-68-e-3d4",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/registry-88c": {
+    "__comp": "__comp---theme-debug-registry-679-501",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/__docusaurus/debug/routes-000": {
+    "__comp": "__comp---theme-debug-routes-946-699",
+    "__context": {
+      "plugin": "plugin---docusaurus-debugb-38-ad3"
+    }
+  },
+  "/-e5f": {
+    "__comp": "__comp---site-src-pages-index-tsx-1-df-d3e",
+    "__context": {
+      "plugin": "plugin---a-74-9d6"
+    },
+    "config": "config---5-e-9-4f3"
+  },
+  "/-173": {
+    "__comp": "__comp---theme-docs-root-5-e-9-0b6",
+    "__context": {
+      "plugin": "plugin---aba-d70"
+    }
+  },
+  "/-027": {
+    "__comp": "__comp---theme-doc-version-roota-7-b-5de",
+    "__props": "__props---22-d-307"
+  },
+  "/-6d7": {
+    "__comp": "__comp---theme-doc-roota-94-67a"
+  },
+  "/filament-translation-suite-cb2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-832-4a1"
+  },
+  "/filament-translation-suite/configuration-4fa": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-configuration-95-f-a34"
+  },
+  "/filament-translation-suite/features-63d": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-151-ae3"
+  },
+  "/filament-translation-suite/features/auto-translation-agent-fec": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-auto-translation-agent-399-0e3"
+  },
+  "/filament-translation-suite/features/code-scanner-8df": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-code-scannerc-3-a-821"
+  },
+  "/filament-translation-suite/features/content-models-a90": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-content-modelsb-96-7d5"
+  },
+  "/filament-translation-suite/features/csv-import-export-228": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-csv-import-export-881-afd"
+  },
+  "/filament-translation-suite/features/file-translations-db3": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-file-translations-4-b-7-753"
+  },
+  "/filament-translation-suite/features/form-morphing-6c6": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-form-morphing-02-e-d6b"
+  },
+  "/filament-translation-suite/features/health-dashboard-cb2": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-health-dashboarda-6-b-9c1"
+  },
+  "/filament-translation-suite/features/machine-translation-6de": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-machine-translation-5-e-2-a9e"
+  },
+  "/filament-translation-suite/features/translation-backups-a19": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-translation-backups-5-a-0-c60"
+  },
+  "/filament-translation-suite/features/translation-portal-647": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-translation-portaleec-5f5"
+  },
+  "/filament-translation-suite/features/vendor-explorer-e10": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-vendor-explorer-779-bc1"
+  },
+  "/filament-translation-suite/features/webhooks-87e": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-features-webhooks-860-38b"
+  },
+  "/filament-translation-suite/getting-started-36a": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-getting-starteda-59-912"
+  },
+  "/filament-translation-suite/pricing-d3f": {
+    "__comp": "__comp---theme-doc-item-178-a40",
+    "content": "content---filament-translation-suite-pricing-289-19e"
+  }
+}

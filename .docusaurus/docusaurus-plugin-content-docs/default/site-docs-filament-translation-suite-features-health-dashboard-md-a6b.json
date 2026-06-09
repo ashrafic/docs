@@ -1,0 +1,25 @@
+{
+  "id": "filament-translation-suite/features/health-dashboard",
+  "title": "health-dashboard",
+  "description": "Coverage Reporting",
+  "source": "@site/docs/filament-translation-suite/features/health-dashboard.md",
+  "sourceDirName": "filament-translation-suite/features",
+  "slug": "/filament-translation-suite/features/health-dashboard",
+  "permalink": "/filament-translation-suite/features/health-dashboard",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/features/health-dashboard.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "form-morphing",
+    "permalink": "/filament-translation-suite/features/form-morphing"
+  },
+  "next": {
+    "title": "machine-translation",
+    "permalink": "/filament-translation-suite/features/machine-translation"
+  }
+}

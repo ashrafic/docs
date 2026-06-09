@@ -1,0 +1,113 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "filament-translation-suite/index",
+          "docs": [
+            {
+              "id": "filament-translation-suite/configuration",
+              "path": "/filament-translation-suite/configuration",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/auto-translation-agent",
+              "path": "/filament-translation-suite/features/auto-translation-agent",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/code-scanner",
+              "path": "/filament-translation-suite/features/code-scanner",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/content-models",
+              "path": "/filament-translation-suite/features/content-models",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/csv-import-export",
+              "path": "/filament-translation-suite/features/csv-import-export",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/file-translations",
+              "path": "/filament-translation-suite/features/file-translations",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/form-morphing",
+              "path": "/filament-translation-suite/features/form-morphing",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/health-dashboard",
+              "path": "/filament-translation-suite/features/health-dashboard",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/index",
+              "path": "/filament-translation-suite/features/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/machine-translation",
+              "path": "/filament-translation-suite/features/machine-translation",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/translation-backups",
+              "path": "/filament-translation-suite/features/translation-backups",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/translation-portal",
+              "path": "/filament-translation-suite/features/translation-portal",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/vendor-explorer",
+              "path": "/filament-translation-suite/features/vendor-explorer",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/features/webhooks",
+              "path": "/filament-translation-suite/features/webhooks",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/getting-started",
+              "path": "/filament-translation-suite/getting-started",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/index",
+              "path": "/filament-translation-suite/",
+              "sidebar": "docs"
+            },
+            {
+              "id": "filament-translation-suite/pricing",
+              "path": "/filament-translation-suite/pricing",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/filament-translation-suite/",
+                "label": "Filament Translation Suite"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}

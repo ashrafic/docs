@@ -1,0 +1,25 @@
+{
+  "id": "filament-translation-suite/features/auto-translation-agent",
+  "title": "auto-translation-agent",
+  "description": "How It Works",
+  "source": "@site/docs/filament-translation-suite/features/auto-translation-agent.md",
+  "sourceDirName": "filament-translation-suite/features",
+  "slug": "/filament-translation-suite/features/auto-translation-agent",
+  "permalink": "/filament-translation-suite/features/auto-translation-agent",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/features/auto-translation-agent.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "index",
+    "permalink": "/filament-translation-suite/features/"
+  },
+  "next": {
+    "title": "code-scanner",
+    "permalink": "/filament-translation-suite/features/code-scanner"
+  }
+}

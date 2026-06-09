@@ -1,0 +1,25 @@
+{
+  "id": "filament-translation-suite/features/translation-portal",
+  "title": "translation-portal",
+  "description": "The Problem",
+  "source": "@site/docs/filament-translation-suite/features/translation-portal.md",
+  "sourceDirName": "filament-translation-suite/features",
+  "slug": "/filament-translation-suite/features/translation-portal",
+  "permalink": "/filament-translation-suite/features/translation-portal",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/features/translation-portal.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "translation-backups",
+    "permalink": "/filament-translation-suite/features/translation-backups"
+  },
+  "next": {
+    "title": "vendor-explorer",
+    "permalink": "/filament-translation-suite/features/vendor-explorer"
+  }
+}

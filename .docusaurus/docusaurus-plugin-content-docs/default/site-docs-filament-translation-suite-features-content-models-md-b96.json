@@ -1,0 +1,25 @@
+{
+  "id": "filament-translation-suite/features/content-models",
+  "title": "content-models",
+  "description": "Auto-Discovery",
+  "source": "@site/docs/filament-translation-suite/features/content-models.md",
+  "sourceDirName": "filament-translation-suite/features",
+  "slug": "/filament-translation-suite/features/content-models",
+  "permalink": "/filament-translation-suite/features/content-models",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/ashraficlabs/ashrafic-docs/edit/main/docs/filament-translation-suite/features/content-models.md",
+  "tags": [],
+  "version": "current",
+  "lastUpdatedAt": 1539502055000,
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "code-scanner",
+    "permalink": "/filament-translation-suite/features/code-scanner"
+  },
+  "next": {
+    "title": "csv-import-export",
+    "permalink": "/filament-translation-suite/features/csv-import-export"
+  }
+}
