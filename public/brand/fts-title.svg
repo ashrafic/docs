@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 32" role="img" aria-label="Filament Translation Suite">
+  <defs>
+    <style>
+      .title { font-family: Optima, Palatino, 'Book Antiqua', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: -0.5px; }
+      .gold { fill: #b88b4a; }
+      .dark { fill: #171717; }
+    </style>
+  </defs>
+  <text y="24">
+    <tspan class="gold title">Filament</tspan>
+    <tspan class="dark title" dx="6">Translation Suite</tspan>
+  </text>
+</svg>

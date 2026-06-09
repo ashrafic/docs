@@ -1,0 +1,16 @@
+{
+  "name": "ashrafic-labs-docs",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Unified documentation hub for Ashrafic Labs open-source packages",
+  "scripts": {
+    "dev": "vitepress dev",
+    "build": "vitepress build",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "^1.6.0",
+    "vue": "^3.5.0"
+  }
+}
