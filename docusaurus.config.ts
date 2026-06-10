@@ -26,7 +26,7 @@ const config: Config = {
           path: 'docs',
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/ashrafic/docs/edit/draft/',
+          editUrl: 'https://github.com/ashrafic/docs/edit/dev/',
           showLastUpdateTime: true,
         },
         blog: false,
