@@ -1,3 +1,9 @@
+---
+title: Features
+sidebar_label: Overview
+sidebar_position: 1
+---
+
 
 ## The Two Worlds of Translation
 

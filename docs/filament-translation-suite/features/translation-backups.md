@@ -1,3 +1,7 @@
+---
+title: Translation Backups
+---
+
 
 ## How It Works
 
@@ -61,7 +65,7 @@ $backup = TranslationBackup::latest()->first();
 app(BackupManager::class)->restore($backup);
 ```
 
-::: warning
+:::warning
 Restoring a backup overwrites the current database state. Consider creating a new backup before restoring an old one, so you can undo the undo.
 :::
 

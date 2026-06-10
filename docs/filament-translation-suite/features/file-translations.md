@@ -1,3 +1,7 @@
+---
+title: File Translations
+---
+
 
 ## The Problem with File-Only Workflows
 
@@ -47,7 +51,7 @@ This scans your entire `lang/` directory and creates database records for every 
 
 Click **"Publish Laravel Lang Files"** to copy Laravel's built-in validation and auth translations into your app's `lang/` directory, then import them into the database.
 
-::: tip
+:::tip
 Use **"Force Publish Laravel Lang Files"** only if you want to overwrite existing custom translations with Laravel defaults. This is destructive — use with caution.
 :::
 
@@ -123,7 +127,7 @@ The publish process is **merge-safe**:
 - New keys from the database are added
 - No data is lost
 
-::: tip
+:::tip
 Keep the `auto_publish` toggle enabled on frequently-edited keys if you want changes to propagate to files immediately. For batch work, leave it off and run "Publish All" when you're done.
 :::
 

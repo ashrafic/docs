@@ -1,3 +1,7 @@
+---
+title: Webhooks
+---
+
 
 ## Supported Platforms
 
@@ -44,7 +48,7 @@ The suite includes built-in webhook handlers for three major platforms:
 3. Select the event: **Key modified**
 4. Save and test
 
-::: tip Webhook Security
+:::tip Webhook Security
 Make sure your webhook endpoints are publicly accessible. If your app is behind a firewall or VPN, webhooks from external platforms won't reach it. Consider using a service like ngrok for local development testing.
 :::
 

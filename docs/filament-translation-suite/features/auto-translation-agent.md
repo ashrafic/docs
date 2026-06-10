@@ -1,3 +1,7 @@
+---
+title: Auto-Translation Agent
+---
+
 
 ## How It Works
 
@@ -43,7 +47,7 @@ $schedule->call(fn () => app(AutoTranslationMonitor::class)->scan())
     ->everyFiveMinutes();
 ```
 
-::: tip
+:::tip
 Make sure your Laravel scheduler is running. Add this cron entry:
 ```bash
 * * * * * cd /path/to/your-project && php artisan schedule:run >> /dev/null 2>&1

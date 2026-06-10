@@ -1,3 +1,7 @@
+---
+title: Translation Portal
+---
+
 
 ## The Problem
 
@@ -22,7 +26,7 @@ The portal is gated by the `fts.portal.access` permission. Only users with this 
 $user->givePermissionTo('fts.portal.access');
 ```
 
-::: tip
+:::tip
 The suite does not create this permission automatically. You should define it in your application's permission system (e.g., Spatie Laravel Permission) and assign it to translator roles.
 :::
 

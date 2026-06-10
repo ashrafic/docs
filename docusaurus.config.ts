@@ -4,18 +4,17 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Ashrafic Labs',
   tagline: 'Tools for the Laravel & Filament ecosystem.',
-  favicon: 'https://ashraficlabs.com/icons/favicon.ico',
+  favicon: '/img/favicon.ico',
   url: 'https://docs.ashraficlabs.com',
   baseUrl: '/',
-  organizationName: 'ashraficlabs',
-  projectName: 'ashrafic-docs',
+  organizationName: 'ashrafic',
+  projectName: 'docs',
   trailingSlash: false,
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
 
   markdown: {
     hooks: {
-      onBrokenMarkdownLinks: 'warn',
+      onBrokenMarkdownLinks: 'throw',
     },
   },
 
@@ -27,7 +26,7 @@ const config: Config = {
           path: 'docs',
           routeBasePath: '/',
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/ashraficlabs/ashrafic-docs/edit/main/',
+          editUrl: 'https://github.com/ashrafic/docs/edit/draft/',
           showLastUpdateTime: true,
         },
         blog: false,
@@ -36,24 +35,50 @@ const config: Config = {
     ],
   ],
 
+  plugins: [
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        indexDocs: true,
+        indexPages: true,
+      },
+    ],
+  ],
+
   themeConfig: {
-    colorMode: { defaultMode: 'light', disableSwitch: false, respectPrefersColorScheme: true },
+    colorMode: { disableSwitch: false, respectPrefersColorScheme: true },
     navbar: {
       title: '',
       logo: {
         alt: 'Ashrafic Labs',
-        src: 'https://ashraficlabs.com/brand/ashrafic-labs-logo-horizontal-primary.svg',
-        srcDark: 'https://ashraficlabs.com/brand/ashrafic-labs-logo-horizontal-primary-light.svg',
-        height: 40,
+        src: '/img/logo.svg',
+        srcDark: '/img/logo-dark.svg',
       },
       items: [
-        { to: '/filament-translation-suite', label: 'Translation Suite', position: 'left' },
-        { href: 'https://ashraficlabs.com', label: 'Main Site →', position: 'right' },
+        { href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right' },
+        { to: '/#packages', label: 'Our Packages', position: 'right' },
+        { href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right', className: 'github-icon' },
       ],
     },
     footer: {
       style: 'light',
-      links: [],
+      logo: {
+        alt: 'Ashrafic Labs',
+        src: '/img/logo.svg',
+        srcDark: '/img/logo-dark.svg',
+        height: 32,
+      },
+      links: [
+        {
+          items: [
+            { label: 'Main Site', href: 'https://ashraficlabs.com' },
+            { label: 'GitHub', href: 'https://github.com/ashrafic' },
+            { label: 'hello@ashraficlabs.com', href: 'mailto:hello@ashraficlabs.com' },
+          ],
+        },
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} Ashrafic Labs. All rights reserved.`,
     },
   },

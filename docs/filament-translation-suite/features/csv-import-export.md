@@ -1,3 +1,7 @@
+---
+title: CSV Import / Export
+---
+
 
 ## Export
 
@@ -8,7 +12,7 @@ Click **"Export CSV"** from the **System Translations** header actions.
 Every translation in the database is included, with columns for:
 - **group** — the translation group
 - **key** — the translation key
-- **{locale}** — one column per configured locale
+- **`{locale}`** — one column per configured locale
 
 Example:
 

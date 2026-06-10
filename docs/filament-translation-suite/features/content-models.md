@@ -1,3 +1,7 @@
+---
+title: Content Models
+---
+
 
 ## Auto-Discovery
 
@@ -67,7 +71,7 @@ Bulk translation uses Laravel's queue system. The job is chunked into batches (c
 
 You'll receive a Filament notification when the batch completes.
 
-::: tip
+:::tip
 Use a dedicated queue for translations to avoid blocking other background jobs:
 ```php
 'bulk_translation' => [

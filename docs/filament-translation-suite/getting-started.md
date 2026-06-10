@@ -1,185 +1,174 @@
+---
+title: Getting Started
+---
 
-## Requirements
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
-Before installing, ensure your environment meets the following requirements:
+Filament Translation Suite is a complete translation management system built natively for Laravel Filament. 
 
-| Requirement | Version
-|-------------|--------
-| PHP | `^8.2`
-| Laravel | `^11.0`
-| Filament | `^5.0`
-| spatie/laravel-translatable | `^6.0`
+:::tip Before You Begin
+Make sure you've completed [Installation](/filament-translation-suite/installation) and [Configuration](/filament-translation-suite/configuration) first. Once the package is [registered in your Filament panel](/filament-translation-suite/installation#panel-registration), you're ready to start translating.
 
-::: tip Optional Dependencies
-Machine translation providers require their respective SDKs:
-- `deeplcom/deepl-php` for DeepL
-- `google/cloud-translate` for Google Cloud Translation
-- No extra package needed for ChatGPT or Claude (uses HTTP directly)
+By default, all users can access the suite. To restrict access, see [Authorization](/filament-translation-suite/authorization).
+:::
+
+This guide walks you through the full workflow — from scanning your codebase to publishing translations.
+
+---
+
+## Workflow
+
+1. **Scan & Import** translation keys from your codebase and existing `lang/` files
+2. **Edit** translations in the Filament UI — single key, bulk, or AI-powered
+3. **Publish** changes back to `lang/` files with merge-safe writes
+
+---
+
+## Translation List
+
+![System Translations List](/filament-translation-suite/assets/screenshots/sys_trans_list.png)
+
+Browse all translations with dynamic columns for each locale. Search by key, group, or translation value. Filter by group, type (system vs vendor), missing translations, or unpublished changes.
+
+---
+
+## Importing Translations
+
+![Importing Translations](/filament-translation-suite/assets/screenshots/system_trans_list_import.png)
+
+Load translations from `lang/` files into the database. The suite preserves your existing translations — nothing is overwritten without confirmation.
+
+### CSV Workflows
+
+- **CSV Export** — Download all translations for external translators, agencies, or backup
+- **CSV Import** — Upload translations from a CSV file. See [CSV Import / Export](/filament-translation-suite/features/csv-import-export) for the format.
+
+---
+
+## Content Translation
+
+![Content Translation Page](/filament-translation-suite/assets/screenshots/content_trans_page.png)
+
+Manage all your translatable database models in one place. The suite auto-discovers every model using Spatie's `HasTranslations` trait and shows coverage status at a glance.
+
+![Bulk Content Translation](/filament-translation-suite/assets/screenshots/content_trans_bulk_trans.png)
+
+**What you can do here:**
+- See all translatable models with per-locale coverage
+- Bulk translate entire models via background queues
+- Check translation status without opening each record
+
+:::tip Model Setup
+Make sure your models are properly configured. See [Model Configuration](/filament-translation-suite/configuration#model-configuration) and [Content Models feature guide](/filament-translation-suite/features/content-models).
 :::
 
 ---
 
-## Installation
+## Editing Individual Translations
 
-Filament Translation Suite is distributed through [Anystack](https://anystack.sh). After purchasing your license, follow these steps:
-
-### 1. Add the repository
-
-```json
-"repositories": [
-    {
-        "type": "composer",
-        "url": "https://filament-translation-suite.composer.sh"
-    }
-]
-```
-
-### 2. Authenticate
-
-```bash
-composer config http-basic.filament-translation-suite.composer.sh EMAIL KEY
-```
-
-Replace `EMAIL` and `KEY` with the license credentials from your Anystack account.
-
-### 3. Install the package
-
-```bash
-composer require ashrafic/filament-translation-suite
-```
-
-Run the install command to publish config and migrations:
-
-```bash
-php artisan filament-translation-suite:install
-```
-
-This command will:
-1. Publish the configuration file to `config/filament-translation-suite.php`
-2. Publish the migration files for the suite's database tables
-3. Publish Laravel's default language files to your `lang/` directory
-
-Run the migrations:
-
-```bash
-php artisan migrate
-```
+Open any translation key to edit all locale values on a single page. Each locale field shows AI translation buttons (DeepL, Google, ChatGPT, Claude) when services are configured — click to translate that field instantly.
 
 ---
 
-## Panel Registration
+## Bulk AI Translation
 
-Register the plugin in your Filament Panel Provider:
+![Bulk Translate Modal](/filament-translation-suite/assets/screenshots/sys_trans_bulk_trans_modal.png)
 
-```php
-<?php
+Translate an entire locale in seconds:
 
-namespace App\Providers\Filament;
+1. Click **Bulk Translate** from the translation list page
+2. Select target language
+3. Choose translation service (DeepL, Google, ChatGPT, or Claude)
+4. Select mode: translate only untranslated values, or retranslate everything
+5. Watch real-time progress
 
-use Ashrafic\FilamentTranslationSuite\FilamentTranslationSuitePlugin;
-use Filament\Panel;
-use Filament\PanelProvider;
-
-class AdminPanelProvider extends PanelProvider
-{
-    public function panel(Panel $panel): Panel
-    {
-        return $panel
-            ->default()
-            ->id('admin')
-            ->path('admin')
-            // ... other configuration
-            ->plugin(FilamentTranslationSuitePlugin::make());
-    }
-}
-```
-
-Once registered, a new **"Translation Suite"** navigation group will appear in your Filament panel with these pages:
-
-- **System Translations** — File-based UI translation management
-- **Content Translation** — Spatie translatable model management
-- **Health Dashboard** — Unified coverage and activity reporting
-- **Translation Portal** — External translator access page
-- **Translation Backups** — Snapshot and restore management
+Laravel placeholders (`:name`, `:count`) and pluralization syntax are preserved automatically.
 
 ---
 
-## Quick Start Workflow
+## Change Tracking
 
-### 1. Import Existing Translations
+The suite tracks which translations have unpublished changes — values that differ from what is currently in `lang/` files.
 
-Open **Translation Suite → System Translations** and click **"Import from Files"** to load all existing `lang/` translations into the database staging table.
+**Visual indicators:**
+- Table view: Modified locale values are highlighted
+- Edit page: Each modified field shows the previous value from files
+- Filter: Use "Has Unpublished Changes" to see only modified translations
 
-### 2. Scan for Missing Strings
-
-Click **"Scan Codebase"** to detect any `__()`, `trans()`, `trans_choice()`, or `@lang()` calls that don't exist in your translation database. Register missing keys in one click.
-
-### 3. Translate
-
-- Edit translations inline using the database-backed editor
-- Use the **D** (DeepL) or **G** (Google) buttons for one-click machine translation on individual fields
-- Run **Bulk Translate** from the header actions to translate thousands of keys via queue workers
-
-### 4. Publish
-
-When you're satisfied with your translations, click **"Publish All"** to write changes back to your `lang/` files. The publish process uses merge-safe writes — existing file values not in the database are preserved.
+This makes it clear exactly what will be written when you publish.
 
 ---
 
-## Locale Switcher
+## Form Translation Views
 
-The plugin automatically injects a **locale switcher** into your Filament panel's user menu. This lets you and your team change the application locale directly from the admin panel.
+To make a field translatable, apply one of the package's form classes to your Filament form schema. The suite provides four display modes:
+
+![Translatable Fields Tabs](/filament-translation-suite/assets/screenshots/translatable_fields_tabs.png)
+
+**Tabs** — Each locale gets its own tab above the field
+
+![Form Sections](/filament-translation-suite/assets/screenshots/translatable_fields_sections.png)
+
+**Sections** — Locales displayed as separate form sections
+
+![Form Stack](/filament-translation-suite/assets/screenshots/translatable_fields_stack.png)
+
+**Stack** — Locales stacked vertically with labels
+
+![Form Fieldset](/filament-translation-suite/assets/screenshots/trans_fields_fieldset.png)
+
+**Fieldset** — Locales grouped inside a fieldset
+
+:::tip One Class Per Mode
+Use the appropriate class from the package on each translatable field in your Filament resource form. See [Form Morphing](/filament-translation-suite/features/form-morphing) for code examples and class references.
+:::
+
+---
+
+## Language Switcher
 
 ![Language Switcher](/filament-translation-suite/assets/screenshots/lang_switcher.png)
 
-### How It Works
+A locale switcher appears in the Filament header, letting you quickly change the current editing language. Available to any user with translation permissions — no need to navigate back to the translations page.
 
-- The switcher appears in the **user menu dropdown** (top-right of your Filament panel)
-- It lists all locales configured in `filament-translation-suite.locales`
-- Each locale shows its flag emoji and native label
-- Clicking a locale immediately switches the app locale and refreshes the page
+---
 
-### Middleware
+---
 
-The plugin registers a persistent middleware (`SetLocale`) that reads the locale from the session on every request. This ensures that:
-- Translatable columns display values in the selected locale
-- Filament's own translations render in the correct language
-- Your application's locale-aware logic works seamlessly
+## Publishing
 
-You don't need to configure anything — the middleware is registered automatically when you add the plugin.
+Click **Publish** to write all translations from the database to `lang/` files. Publishing:
 
-### Programmatic Locale Switching
+- **Merges** rather than replaces — existing custom translations are preserved
+- **Creates a backup** automatically before writing
+- Only publishes translations with unpublished changes
 
-You can also switch locales programmatically:
+---
 
-```php
-// Redirect back to the previous page
-return redirect()->route('fts.switch-locale', ['locale' => 'de']);
-```
+## Health Dashboard
 
-Or set it directly in the session:
+![Health Dashboard](/filament-translation-suite/assets/screenshots/health_dashboard.png)
 
-```php
-session()->put('locale', 'de');
-app()->setLocale('de');
-```
+Unified coverage reporting across file translations and content models.
+
+![Recent Activity](/filament-translation-suite/assets/screenshots/health_dash_recent_activity.png)
+
+Real-time activity feed with user attribution. Know exactly where your translations stand — and what's missing — at a glance. See [Health Dashboard](/filament-translation-suite/features/health-dashboard) for details.
+
+---
+
+## Backups
+
+![Translation Backups](/filament-translation-suite/assets/screenshots/trans_backup.png)
+
+Automatic backups before every publish. Any previous backup can be restored. See [Translation Backups](/filament-translation-suite/features/translation-backups) for details.
 
 ---
 
 ## Next Steps
 
-- **[Configuration](/filament-translation-suite/configuration)** — Customize locales, providers, scanner paths, and more
-- **[File Translations](/filament-translation-suite/features/file-translations)** — Deep dive into UI string management
-- **[Content Models](/filament-translation-suite/features/content-models)** — Learn how model translations work
-- **[Machine Translation](/filament-translation-suite/features/machine-translation)** — Set up DeepL, Google, ChatGPT, and Claude
-
----
-
-## Support
-
-Filament Translation Suite is a commercial product sold through [Anystack](https://ashraficlabs.lemonsqueezy.com).
-
-- **Documentation**: You're reading it
-- **Website**: [ashraficlabs.com](https://ashraficlabs.com)
-- **Purchases & Licenses**: Manage through your [Anystack dashboard](https://ashraficlabs.lemonsqueezy.com)
-- **Licensing**: See our [Pricing page](/filament-translation-suite/pricing)
+- [Install the suite](/filament-translation-suite/installation)
+- [Configure providers & locales](/filament-translation-suite/configuration)
+- [Explore all features](/filament-translation-suite/features)
+- [View pricing](/filament-translation-suite/pricing)

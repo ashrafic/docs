@@ -1,3 +1,7 @@
+---
+title: Configuration
+---
+
 
 ## Publishing the Config
 
@@ -159,7 +163,7 @@ FTS_ANTHROPIC_API_KEY=sk-ant-...
 FTS_ANTHROPIC_MODEL=claude-haiku-4-5-20251001
 ```
 
-::: tip DeepL Free vs Pro
+:::tip DeepL Free vs Pro
 Use `api-free.deepl.com` for free accounts and `api.deepl.com` for Pro accounts. The suite auto-detects which adapter is configured based on whether an API key is present.
 :::
 
@@ -208,7 +212,7 @@ Customize which directories and functions the code scanner monitors:
 ],
 ```
 
-::: warning
+:::warning
 The scanner only processes `.php` files. Blade templates with `@lang` directives are supported, but JavaScript files are not scanned.
 :::
 

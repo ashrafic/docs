@@ -1,3 +1,7 @@
+---
+title: Code Scanner
+---
+
 
 ## Why You Need It
 

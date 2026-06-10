@@ -1,10 +1,14 @@
+---
+title: Pricing & Licensing
+---
 
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+
+<div class="pricing-grid">
 
 <div class="pricing-tier">
-  <div style="font-size: 0.875rem; font-weight: 600; color: var(--vp-c-text-3); letter-spacing: 0.05em; margin-bottom: 0.5rem;">SOLO</div>
+  <div class="pricing-badge">SOLO</div>
   <div class="pricing-price">$89<span class="period"> one-time</span></div>
-  <p style="color: var(--vp-c-text-3); margin: 1rem 0 1.5rem;">For individual developers and single projects.</p>
+  <p class="pricing-tier-desc">For individual developers and single projects.</p>
   <ul class="pricing-features">
     <li>1 project</li>
     <li>Unlimited locales</li>
@@ -13,15 +17,13 @@
     <li>Email support</li>
     <li>1 year of updates</li>
   </ul>
-  <div style="margin-top: 1.5rem;">
-    <a href="https://ashraficlabs.lemonsqueezy.com" target="_blank" style="display: block; text-align: center; padding: 0.75rem 1.5rem; background: var(--vp-c-bg-soft); color: var(--vp-c-text-1); border-radius: 8px; text-decoration: none; font-weight: 600; border: 1px solid var(--vp-c-border);">Get Started</a>
-  </div>
+  <a href="https://polar.sh/ashraficlabs" target="_blank" class="pricing-cta pricing-cta-default">Buy Solo</a>
 </div>
 
 <div class="pricing-tier featured">
-  <div style="font-size: 0.875rem; font-weight: 600; color: var(--vp-c-brand-3); letter-spacing: 0.05em; margin-bottom: 0.5rem;">AGENCY</div>
+  <div class="pricing-badge">AGENCY</div>
   <div class="pricing-price">$179<span class="period"> one-time</span></div>
-  <p style="color: var(--vp-c-text-3); margin: 1rem 0 1.5rem;">For agencies and teams with multiple projects.</p>
+  <p class="pricing-tier-desc">For agencies and teams with multiple projects.</p>
   <ul class="pricing-features">
     <li>Unlimited projects</li>
     <li>Unlimited locales</li>
@@ -30,15 +32,13 @@
     <li>Priority email support</li>
     <li>1 year of updates</li>
   </ul>
-  <div style="margin-top: 1.5rem;">
-    <a href="https://ashraficlabs.lemonsqueezy.com" target="_blank" style="display: block; text-align: center; padding: 0.75rem 1.5rem; background: var(--vp-c-brand-1); color: #f5f1e8; border-radius: 8px; text-decoration: none; font-weight: 600;">Get Started</a>
-  </div>
+  <a href="https://polar.sh/ashraficlabs" target="_blank" class="pricing-cta pricing-cta-featured">Buy Agency</a>
 </div>
 
 </div>
 
-<div style="text-align: center; margin: 2rem 0; padding: 1.5rem; background: var(--vp-c-bg-soft); border-radius: 12px; border: 1px solid var(--vp-c-border);">
-  <p style="margin: 0; color: var(--vp-c-text-2); font-size: 1.05rem;">
+<div class="pricing-note">
+  <p class="pricing-note-text">
     <strong>Renew for just $39 (Solo) or $69 (Agency)</strong> per year to keep receiving updates and support.<br/>
     Already own a license? You keep lifetime access to everything you've downloaded — no expiration, no surprises.
   </p>
@@ -118,22 +118,14 @@ Because we don't believe in holding your code hostage. You paid for the tool —
 
 ## How to Buy
 
-Filament Translation Suite is sold through **Anystack** — the trusted marketplace for premium Laravel and Filament packages.
+Filament Translation Suite is sold through **Polar** — secure payment processing with instant license key delivery.
 
-1. **Visit** [Anystack](https://ashraficlabs.lemonsqueezy.com) to purchase your license
-2. **Receive** instant access to the package and your license key
-3. **Install** via Composer using your Anystack credentials
+1. **Visit** [Polar](https://polar.sh/ashraficlabs) to purchase your license
+2. **Receive** your license key via email immediately after payment
+3. **Install** via Composer using the [Ashrafic Labs Private Composer Registry](/filament-translation-suite/installation#composer-registry) with your license key
 
 For questions before purchasing, email us at [hello@ashraficlabs.com](mailto:hello@ashraficlabs.com).
 
----
-
-## Refund Policy
-
-We offer a **14-day money-back guarantee** on all purchases. If Filament Translation Suite doesn't meet your expectations, email us within 14 days of purchase for a full refund. No usage limits, no questions asked.
-
----
-
-<p align="center" style="margin-top: 3rem;">
+<p class="pricing-quote">
   <em>Built with precision. Priced fairly. Supported personally. Yours forever.</em>
 </p>

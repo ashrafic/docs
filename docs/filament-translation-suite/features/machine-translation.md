@@ -1,10 +1,14 @@
+---
+title: Machine Translation
+---
+
 
 ## Supported Providers
 
 | Provider | Best For | Setup Complexity
 |----------|----------|------------------
 | **DeepL** | High-quality European languages, formality control | Low — just an API key
-| **Google Cloud Translate** | Massive language coverage, enterprise scale | Medium — Google Cloud project required
+| **Google Cloud Translate** | Massive language coverage, enterprise scale | Easy — API key required
 | **OpenAI ChatGPT** | Context-aware, nuanced, natural-sounding translations | Low — just an API key
 | **Anthropic Claude** | High-quality AI with excellent tone preservation | Low — just an API key
 
@@ -65,10 +69,6 @@ Add to `.env`:
 ```ini
 FTS_GOOGLE_API_KEY=your-google-cloud-api-key
 ```
-
-::: warning
-Google Cloud Translate requires a billing-enabled Google Cloud project. Make sure you have billing configured and API quotas set appropriately.
-:::
 
 ---
 

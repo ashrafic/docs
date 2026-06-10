@@ -1,3 +1,7 @@
+---
+title: Health Dashboard
+---
+
 
 ## Coverage Reporting
 
