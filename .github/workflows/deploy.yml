@@ -52,7 +52,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACTIONS_DEPLOY_TOKEN }}
 
   release:
     needs: build
