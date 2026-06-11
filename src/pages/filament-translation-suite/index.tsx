@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import HeroSlider from '@site/src/components/HeroSlider';
-import { Layers, FileText, Database, WandSparkles, Languages, Users, BarChart3, ShieldCheck, RefreshCw, Infinity } from 'lucide-react';
+import { Layers, FileText, Database, WandSparkles, Languages, Users, BarChart3, ShieldCheck, RefreshCw } from 'lucide-react';
 
 const features = [
   { Icon: Layers, title: 'One Suite, Two Worlds', desc: 'Stop juggling separate tools. Manage your lang/ files AND your Spatie translatable models from one Filament panel. No extra subscriptions. No context switching. No gaps between your UI and your content.' },
@@ -14,7 +14,6 @@ const features = [
   { Icon: BarChart3, title: 'Health Dashboard', desc: 'Unified coverage reporting across files and models. Real-time activity feed with user attribution. Know exactly where your translations stand — and what\'s missing — at a single glance.' },
   { Icon: ShieldCheck, title: 'Non-Destructive by Design', desc: 'Every write operation is safe. Publishing merges rather than replaces. Bulk translation never overwrites existing values. Automatic backups. You can always undo.' },
   { Icon: RefreshCw, title: 'Auto-Translation Agent', desc: 'Background monitor that detects untranslated strings and automatically queues machine translation jobs. Set it once and your translations stay current.' },
-  { Icon: Infinity, title: 'Lifetime Access', desc: 'Buy once, own forever. Every version released during your active update period is yours to keep indefinitely. No subscription trap. No license expiration popups. Your code never stops working.' },
 ];
 
 export default function FtsHome(): JSX.Element {
@@ -61,6 +60,7 @@ export default function FtsHome(): JSX.Element {
           })}
         </div>
       </div>
+
       {/* Feature Banner */}
       <div className="fts-features-banner">
         <p>
