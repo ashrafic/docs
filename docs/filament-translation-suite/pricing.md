@@ -17,7 +17,7 @@ title: Pricing & Licensing
     <li>Email support</li>
     <li>1 year of updates</li>
   </ul>
-  <a href="https://polar.sh/ashraficlabs" target="_blank" class="pricing-cta pricing-cta-default">Buy Solo</a>
+  <a href="https://buy.polar.sh/polar_cl_RhLqFbMMOlPJIIBfUrwQy954YFTJ9hTDuPU1G3JHuaS" target="_blank" class="pricing-cta pricing-cta-default">Buy Solo</a>
 </div>
 
 <div class="pricing-tier featured">
@@ -32,7 +32,7 @@ title: Pricing & Licensing
     <li>Priority email support</li>
     <li>1 year of updates</li>
   </ul>
-  <a href="https://polar.sh/ashraficlabs" target="_blank" class="pricing-cta pricing-cta-featured">Buy Agency</a>
+  <a href="https://buy.polar.sh/polar_cl_RhLqFbMMOlPJIIBfUrwQy954YFTJ9hTDuPU1G3JHuaS" target="_blank" class="pricing-cta pricing-cta-featured">Buy Agency</a>
 </div>
 
 </div>
@@ -120,11 +120,17 @@ Because we don't believe in holding your code hostage. You paid for the tool —
 
 Filament Translation Suite is sold through **Polar** — secure payment processing with instant license key delivery.
 
-1. **Visit** [Polar](https://polar.sh/ashraficlabs) to purchase your license
+1. **Visit** [our checkout page](https://buy.polar.sh/polar_cl_RhLqFbMMOlPJIIBfUrwQy954YFTJ9hTDuPU1G3JHuaS) to purchase your license
 2. **Receive** your license key via email immediately after payment
 3. **Install** via Composer using the [Ashrafic Labs Private Composer Registry](/filament-translation-suite/installation#composer-registry) with your license key
 
 For questions before purchasing, email us at [hello@ashraficlabs.com](mailto:hello@ashraficlabs.com).
+
+---
+
+## License Portal
+
+A self-service portal is coming soon at [packages.ashraficlabs.com/portal](https://packages.ashraficlabs.com/portal) where you can view your license key, check your update status, and renew your license. Stay tuned.
 
 <p class="pricing-quote">
   <em>Built with precision. Priced fairly. Supported personally. Yours forever.</em>
