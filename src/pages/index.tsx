@@ -49,7 +49,7 @@ export default function Home(): JSX.Element {
             onMouseOver={e => cardHover(e, true)}
             onMouseOut={e => cardHover(e, false)}>
             <FtsTitleSvg />
-            <p className="pkg-card-desc">The only professional-grade translation management system built natively for Laravel Filament. Unify lang/ files and Spatie translatable models with DeepL, Google Translate, ChatGPT &amp; Claude.</p>
+            <p className="pkg-card-desc">Translate both file-based strings and database content — all from one Filament panel. Track coverage with a complete overview. Bulk-translate thousands of keys. Powered by DeepL, Google Translate, ChatGPT &amp; Claude.</p>
             <span className="pkg-card-cta">View Documentation →</span>
           </Link>
 
