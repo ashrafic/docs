@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from '@theme/Layout';
 import Link from '@docusaurus/Link';
 import HeroSlider from '@site/src/components/HeroSlider';
-import { Layers, FileText, Database, WandSparkles, Languages, Users, BarChart3, ShieldCheck, RefreshCw } from 'lucide-react';
+import { Layers, FileText, Database, WandSparkles, Languages, Users, BarChart3, ShieldCheck, RefreshCw, Infinity } from 'lucide-react';
 
 const features = [
   { Icon: Layers, title: 'One Suite, Two Worlds', desc: 'Stop juggling separate tools. Manage your lang/ files AND your Spatie translatable models from one Filament panel. No extra subscriptions. No context switching. No gaps between your UI and your content.' },
@@ -14,6 +14,7 @@ const features = [
   { Icon: BarChart3, title: 'Health Dashboard', desc: 'Unified coverage reporting across files and models. Real-time activity feed with user attribution. Know exactly where your translations stand — and what\'s missing — at a single glance.' },
   { Icon: ShieldCheck, title: 'Non-Destructive by Design', desc: 'Every write operation is safe. Publishing merges rather than replaces. Bulk translation never overwrites existing values. Automatic backups. You can always undo.' },
   { Icon: RefreshCw, title: 'Auto-Translation Agent', desc: 'Background monitor that detects untranslated strings and automatically queues machine translation jobs. Set it once and your translations stay current.' },
+  { Icon: Infinity, title: 'Lifetime Access', desc: 'Buy once, own forever. Every version released during your active update period is yours to keep indefinitely. No subscription trap. No license expiration popups. Your code never stops working.' },
 ];
 
 export default function FtsHome(): JSX.Element {
@@ -28,9 +29,10 @@ export default function FtsHome(): JSX.Element {
               <span className="fts-hero-line2">Translation Suite</span>
             </h1>
             <p className="fts-hero-tagline">One Suite. Every String. Zero Friction.</p>
+            <p className="fts-hero-sub">Buy once. Own forever. No subscriptions.</p>
             <p className="fts-hero-desc">
-              The only professional-grade translation management system built natively for Laravel Filament.
-              Unify file-based UI translations and database-driven content models — with DeepL, Google Translate, ChatGPT &amp; Claude — without ever leaving your admin panel.
+              Translate both file-based strings and database content — all from one Filament panel.
+              Track coverage with a complete overview. Bulk-translate thousands of keys. Powered by DeepL, Google Translate, ChatGPT &amp; Claude.
             </p>
             <div className="fts-hero-actions">
               <Link className="fts-btn fts-btn-brand" to="/filament-translation-suite/getting-started">Get Started</Link>

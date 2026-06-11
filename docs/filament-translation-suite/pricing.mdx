@@ -2,6 +2,9 @@
 title: Pricing & Licensing
 ---
 
+import { CHECKOUT_URL, PRODUCT_IDS, checkoutLink } from './_data';
+import { ShieldCheck, MailCheck, Infinity } from 'lucide-react';
+
 
 <div class="pricing-grid">
 
@@ -17,7 +20,8 @@ title: Pricing & Licensing
     <li>Email support</li>
     <li>1 year of updates</li>
   </ul>
-  <a href="https://buy.polar.sh/polar_cl_RhLqFbMMOlPJIIBfUrwQy954YFTJ9hTDuPU1G3JHuaS" target="_blank" class="pricing-cta pricing-cta-default">Buy Solo</a>
+  <p class="pricing-lifetime">Lifetime access — every version you receive is yours.</p>
+  <a href={checkoutLink(PRODUCT_IDS.solo)} target="_blank" class="pricing-cta fts-btn fts-btn-alt">Buy Solo</a>
 </div>
 
 <div class="pricing-tier featured">
@@ -32,9 +36,39 @@ title: Pricing & Licensing
     <li>Priority email support</li>
     <li>1 year of updates</li>
   </ul>
-  <a href="https://buy.polar.sh/polar_cl_RhLqFbMMOlPJIIBfUrwQy954YFTJ9hTDuPU1G3JHuaS" target="_blank" class="pricing-cta pricing-cta-featured">Buy Agency</a>
+  <p class="pricing-lifetime">Lifetime access — every version you receive is yours.</p>
+  <a href={checkoutLink(PRODUCT_IDS.agency)} target="_blank" class="pricing-cta fts-btn fts-btn-brand">Buy Agency</a>
 </div>
 
+</div>
+
+<div class="payment-footer">
+  <div class="payment-trust">
+    <div class="payment-trust-item">
+      <ShieldCheck size={15} />
+      <span>Secure checkout</span>
+    </div>
+    <div class="payment-trust-item">
+      <MailCheck size={15} />
+      <span>Instant license key delivery</span>
+    </div>
+    <div class="payment-trust-item">
+      <Infinity size={15} />
+      <span>Lifetime access to your code</span>
+    </div>
+  </div>
+  <div class="payment-cards">
+    <img src="/img/payment/visa.svg" alt="Visa" class="card-logo" />
+    <img src="/img/payment/mastercard.svg" alt="Mastercard" class="card-logo" />
+    <img src="/img/payment/amex.svg" alt="American Express" class="card-logo" />
+    <img src="/img/payment/discover.svg" alt="Discover" class="card-logo" />
+    <img src="/img/payment/apple-pay.svg" alt="Apple Pay" class="card-logo" />
+    <img src="/img/payment/google-pay.svg" alt="Google Pay" class="card-logo" />
+    <img src="/img/payment/cash-app.svg" alt="Cash App" class="card-logo" />
+  </div>
+  <p class="payment-compare-link">
+    Not seeing what you need? <a href={CHECKOUT_URL} target="_blank">Compare plans side by side &rarr;</a>
+  </p>
 </div>
 
 <div class="pricing-note">
@@ -50,6 +84,7 @@ title: Pricing & Licensing
 
 Every license includes:
 
+- **Lifetime access** — every version released while your updates are active is yours to keep, forever
 - **All features** — no feature gating, no "pro" tiers, no upsells
 - **All translation providers** — DeepL, Google Cloud Translate, ChatGPT, and Claude
 - **Unlimited locales** — configure as many languages as your application needs
@@ -90,10 +125,6 @@ Filament Translation Suite is distributed as compiled PHP source. You have full 
 
 ## Frequently Asked Questions
 
-### Can I try it before buying?
-
-We don't offer a free trial, but we do offer a **14-day money-back guarantee**. If the suite doesn't meet your needs, contact us for a full refund — no questions asked.
-
 ### What counts as a "project"?
 
 A project is a single application or product. If you build `client-a.com` and `client-b.com` as two separate Laravel apps, that's two projects. If you run `api.example.com` and `app.example.com` as the same Laravel app, that's one project.
@@ -118,9 +149,9 @@ Because we don't believe in holding your code hostage. You paid for the tool —
 
 ## How to Buy
 
-Filament Translation Suite is sold through **Polar** — secure payment processing with instant license key delivery.
+Filament Translation Suite is sold through <a href={CHECKOUT_URL} target="_blank" class="polar-link"><img src="/img/payment/polar.svg" alt="Polar" class="polar-logo" /> Polar</a> — secure payment processing with instant license key delivery.
 
-1. **Visit** [our checkout page](https://buy.polar.sh/polar_cl_RhLqFbMMOlPJIIBfUrwQy954YFTJ9hTDuPU1G3JHuaS) to purchase your license
+1. **Choose** Solo or Agency above to purchase your license
 2. **Receive** your license key via email immediately after payment
 3. **Install** via Composer using the [Ashrafic Labs Private Composer Registry](/filament-translation-suite/installation#composer-registry) with your license key
 

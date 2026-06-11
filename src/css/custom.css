@@ -246,6 +246,72 @@ a.pkg-card, a.pkg-card:hover {
 
 
 /* Pricing page */
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.payment-footer {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.payment-trust {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.payment-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-secondary-darkest);
+}
+
+.payment-cards {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.card-logo {
+  width: 32px;
+  height: 22px;
+  object-fit: contain;
+}
+
+.polar-logo {
+  width: 18px;
+  height: 18px;
+  vertical-align: text-bottom;
+}
+
+.polar-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.polar-link:hover {
+  text-decoration: underline;
+}
+
+.payment-compare-link {
+  margin-top: 1.2rem;
+  font-size: 0.85rem;
+  color: var(--ifm-color-secondary-darkest);
+}
+
+.payment-compare-link a {
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+}
+
 .pricing-tier {
   border-radius: 16px;
   border: 1px solid var(--ifm-color-emphasis-300);
@@ -306,23 +372,8 @@ a.pkg-card, a.pkg-card:hover {
 
 .pricing-cta {
   display: block;
-  text-align: center;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: 600;
+  width: 100%;
   margin-top: 1.5rem;
-}
-
-.pricing-cta-default {
-  background: var(--ifm-background-surface-color);
-  color: var(--ifm-font-color-base);
-  border: 1px solid var(--ifm-color-emphasis-300);
-}
-
-.pricing-cta-featured {
-  background: var(--ifm-color-primary);
-  color: #f5f1e8;
 }
 
 .pricing-note {
@@ -343,13 +394,6 @@ a.pkg-card, a.pkg-card:hover {
 .pricing-quote {
   text-align: center;
   margin-top: 3rem;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 1.5rem;
-  margin: 2rem 0;
 }
 
 .pricing-price {
@@ -382,6 +426,14 @@ a.pkg-card, a.pkg-card:hover {
   color: var(--ifm-color-accent);
   font-weight: 700;
 }
+
+.pricing-lifetime {
+  font-size: 0.85rem;
+  color: var(--ifm-color-accent);
+  text-align: center;
+  margin: 1rem 0 0;
+}
+
 /* Footer */
 .footer__items {
   display: flex;
@@ -486,7 +538,14 @@ a.pkg-card, a.pkg-card:hover {
   font-size: clamp(1.2rem, 2vw, 1.5rem);
   font-weight: 500;
   color: var(--ifm-color-secondary-darkest);
+  margin: 0 0 8px;
+}
+
+.fts-hero-sub {
+  font-size: 0.95rem;
+  color: var(--ifm-color-accent);
   margin: 0 0 16px;
+  font-weight: 500;
 }
 
 .fts-hero-desc {
