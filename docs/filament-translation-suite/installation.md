@@ -26,7 +26,7 @@ Machine translation providers require their respective SDKs:
 ## Installation
 ### Composer Registry
 
-Filament Translation Suite is distributed through the **Ashrafic Labs Private Composer Registry**. After purchasing your license via [Polar](https://polar.sh/ashraficlabs), you'll receive a license key via email.
+Filament Translation Suite is distributed through the **Ashrafic Labs Private Composer Registry**. After purchasing your license via [our checkout page](https://buy.polar.sh/polar_cl_RhLqFbMMOlPJIIBfUrwQy954YFTJ9hTDuPU1G3JHuaS), you'll receive a license key via email.
 
 ### 1. Add the repository
 
@@ -182,9 +182,15 @@ app()->setLocale('de');
 
 ## Support
 
-Filament Translation Suite is a commercial product sold through [Polar](https://polar.sh/ashraficlabs).
+Filament Translation Suite is a commercial product sold through [Polar](https://buy.polar.sh/polar_cl_RhLqFbMMOlPJIIBfUrwQy954YFTJ9hTDuPU1G3JHuaS).
 
 - **Documentation**: You're reading it
 - **Website**: [ashraficlabs.com](https://ashraficlabs.com)
-- **Purchases & Licenses**: Manage through your [Polar dashboard](https://polar.sh/ashraficlabs)
+- **Purchases & Licenses**: Manage through the [License Portal](https://packages.ashraficlabs.com/portal) (coming soon)
 - **Licensing**: See our [Pricing page](/filament-translation-suite/pricing)
+
+---
+
+## License Portal
+
+A self-service portal is coming soon at [packages.ashraficlabs.com/portal](https://packages.ashraficlabs.com/portal) where you can view your license key, check your update status, and renew your license. Stay tuned.
