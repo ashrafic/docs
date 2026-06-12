@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  body { margin: 40px; background: #f5f1e8; font-family: system-ui; }
+  h2 { color: #12352f; font-size: 14px; margin: 24px 0 8px; }
+  .overlay-wrap { position: relative; width: 280px; margin-bottom: 8px; }
+  .overlay-wrap img { display: block; width: 280px; height: auto; }
+  .overlay-top { position: absolute; top: 0; left: 0; opacity: 0.5; }
+  .standalone { width: 280px; height: auto; display: block; margin-bottom: 8px; }
+  .label { font-size: 12px; color: #777; margin-bottom: 2px; }
+</style>
+</head>
+<body>
+
+<h2>Filament Translation Suite</h2>
+<div class="label">Overlay</div>
+<div class="overlay-wrap">
+  <img src="filament-translation-suite/text-logo/title.svg">
+  <img class="overlay-top" src="filament-translation-suite/title.svg">
+</div>
+<div class="label">Original (text)</div>
+<img class="standalone" src="filament-translation-suite/text-logo/title.svg">
+<div class="label">Paths</div>
+<img class="standalone" src="filament-translation-suite/title.svg">
+
+<h2 style="margin-top:40px;">Dark</h2>
+<div style="background:#12352f;padding:20px;display:inline-block;border-radius:4px;">
+  <div class="label" style="color:#aaa;">Overlay</div>
+  <div class="overlay-wrap">
+    <img src="filament-translation-suite/text-logo/title-light.svg">
+    <img class="overlay-top" src="filament-translation-suite/title-light.svg">
+  </div>
+  <div class="label" style="color:#aaa;">Original (text)</div>
+  <img class="standalone" src="filament-translation-suite/text-logo/title-light.svg">
+  <div class="label" style="color:#aaa;">Paths</div>
+  <img class="standalone" src="filament-translation-suite/title-light.svg">
+</div>
+
+</body>
+</html>
