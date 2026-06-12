@@ -53,8 +53,8 @@ const config: Config = {
       title: '',
       logo: {
         alt: 'Ashrafic Labs',
-        src: '/img/logo.svg',
-        srcDark: '/img/logo-dark.svg',
+        src: '/img/ashrafic-labs-logo-horizontal-primary.svg',
+        srcDark: '/img/ashrafic-labs-logo-horizontal-primary-light.svg',
       },
       items: [
         { href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right' },
@@ -66,8 +66,8 @@ const config: Config = {
       style: 'light',
       logo: {
         alt: 'Ashrafic Labs',
-        src: '/img/logo.svg',
-        srcDark: '/img/logo-dark.svg',
+        src: '/img/ashrafic-labs-logo-horizontal-primary.svg',
+        srcDark: '/img/ashrafic-labs-logo-horizontal-primary-light.svg',
         height: 32,
       },
       links: [

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 204 32">
+  <defs>
+    <style>
+      .t { font-family: Optima, Palatino, 'Book Antiqua', Georgia, serif; font-size: 26px; font-weight: 600; letter-spacing: -0.5px; }
+      .g { fill: #b88b4a; }
+      .d { fill: #171717; }
+    </style>
+  </defs>
+  <text y="24"><tspan class="g t">Laravel</tspan><tspan class="d t" dx="6">Mailbridge</tspan></text>
+</svg>
