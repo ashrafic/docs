@@ -34,7 +34,7 @@ Filament Translation Suite is distributed through the **Ashrafic Labs Private Co
 "repositories": [
     {
         "type": "composer",
-        "url": "https://packages.ashraficlabs.com/repo"
+        "url": "https://packages.ashraficlabs.com"
     }
 ]
 ```
