@@ -313,6 +313,22 @@ a.pkg-card, a.pkg-card:hover {
   font-weight: 500;
 }
 
+.payment-legal-links {
+  margin-top: 0.6rem;
+  font-size: 0.75rem;
+  color: var(--ifm-color-secondary-darker);
+}
+
+.payment-legal-links a {
+  color: var(--ifm-color-secondary-darkest);
+  font-weight: 500;
+}
+
+.payment-legal-links a:hover {
+  color: var(--ifm-color-primary);
+  text-decoration: underline;
+}
+
 .pricing-tier {
   border-radius: 16px;
   border: 1px solid var(--ifm-color-emphasis-300);
