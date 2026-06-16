@@ -5,7 +5,7 @@ title: Getting Started
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Filament White Label lets you give every tenant their own brand — or rebrand your own portal in a single-tenant setup. Logo, colors, fonts, layout, CSS, footer, and more. All configurable from a clean UI.
+Total panel rebranding — for you and every tenant. No code. Logo, colors, fonts, layout, CSS, footer — every tenant gets their own brand, or rebrand your own portal in a single-tenant setup. Install, add one line to your PanelProvider, done.
 
 :::tip Before You Begin
 Make sure you've completed [Installation](/filament-white-label/installation) and [Configuration](/filament-white-label/configuration) first. Once you've added `->whiteLabel()` to your PanelProvider, you're ready to brand.
