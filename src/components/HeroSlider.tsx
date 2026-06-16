@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 
 const slides = [
   { src: '/filament-translation-suite/assets/screenshots/sys_trans_list.png', alt: 'System Translations List' },
@@ -14,14 +14,32 @@ const slides = [
 export default function HeroSlider() {
   const [current, setCurrent] = useState(0);
   const [lightbox, setLightbox] = useState<number | null>(null);
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const ratiosRef = useRef<number[]>([]);
 
   const next = useCallback(() => setCurrent(c => (c + 1) % slides.length), []);
   const prev = useCallback(() => setCurrent(c => (c - 1 + slides.length) % slides.length), []);
+
+  const updateHeight = useCallback(() => {
+    const vp = viewportRef.current;
+    if (!vp) return;
+    const ratio = ratiosRef.current[current];
+    if (ratio) {
+      vp.style.height = `${vp.clientWidth / ratio}px`;
+    }
+  }, [current]);
 
   useEffect(() => {
     const t = setInterval(next, 4000);
     return () => clearInterval(t);
   }, [next]);
+
+  useEffect(() => { updateHeight(); }, [current, updateHeight]);
+
+  useEffect(() => {
+    window.addEventListener('resize', updateHeight);
+    return () => window.removeEventListener('resize', updateHeight);
+  }, [updateHeight]);
 
   useEffect(() => {
     if (lightbox !== null) {
@@ -36,13 +54,19 @@ export default function HeroSlider() {
     }
   }, [lightbox]);
 
+  const handleImgLoad = (i: number, e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    ratiosRef.current[i] = img.naturalWidth / img.naturalHeight;
+    if (i === current) updateHeight();
+  };
+
   return (
     <div className="hero-slider">
-      <div className="hero-slider-viewport">
+      <div className="hero-slider-viewport" ref={viewportRef}>
         <div className="hero-slider-track" style={{ transform: `translateX(-${current * 100}%)` }}>
           {slides.map((s, i) => (
             <div key={i} className="hero-slide" onClick={() => setLightbox(i)}>
-              <img src={s.src} alt={s.alt} loading="lazy" />
+              <img src={s.src} alt={s.alt} loading="lazy" onLoad={e => handleImgLoad(i, e)} />
               <div className="hero-slide-overlay">
                 <svg className="hero-slide-zoom" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/>

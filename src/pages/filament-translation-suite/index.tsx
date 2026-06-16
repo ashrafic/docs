@@ -20,41 +20,41 @@ export default function FtsHome(): JSX.Element {
   return (
     <Layout title="Filament Translation Suite" description="The only translation tool your Filament app needs.">
       {/* Hero */}
-      <div className="fts-hero">
-        <div className="fts-hero-inner">
-          <div className="fts-hero-text">
-            <h1 className="fts-hero-title">
-              <span className="fts-hero-line1">Filament</span>
-              <span className="fts-hero-line2">Translation Suite</span>
+      <div className="pkg-hero">
+        <div className="pkg-hero-inner">
+          <div className="pkg-hero-text">
+            <h1 className="pkg-hero-title">
+              <span className="pkg-hero-line1">Filament</span>
+              <span className="pkg-hero-line2">Translation Suite</span>
             </h1>
-            <p className="fts-hero-tagline">One Suite. Every String. Zero Friction.</p>
-            <p className="fts-hero-sub">Buy once. Own forever. No subscriptions.</p>
-            <p className="fts-hero-desc">
+            <p className="pkg-hero-tagline">One Suite. Every String. Zero Friction.</p>
+            <p className="pkg-hero-sub">Buy once. Own forever. No subscriptions.</p>
+            <p className="pkg-hero-desc">
               Translate both file-based strings and database content — all from one Filament panel.
               Track coverage with a complete overview. Bulk-translate thousands of keys. Powered by DeepL, Google Translate, ChatGPT &amp; Claude.
             </p>
-            <div className="fts-hero-actions">
-              <Link className="fts-btn fts-btn-brand" to="/filament-translation-suite/getting-started">Get Started</Link>
-              <Link className="fts-btn fts-btn-alt" to="/filament-translation-suite/features">Explore Features</Link>
-              <Link className="fts-btn fts-btn-alt" to="/filament-translation-suite/pricing">View Pricing</Link>
+            <div className="pkg-hero-actions">
+              <Link className="pkg-btn pkg-btn-brand" to="/filament-translation-suite/getting-started">Get Started</Link>
+              <Link className="pkg-btn pkg-btn-alt" to="/filament-translation-suite/features">Explore Features</Link>
+              <Link className="pkg-btn pkg-btn-alt" to="/filament-translation-suite/pricing">View Pricing</Link>
             </div>
           </div>
-          <div className="fts-hero-slider">
+          <div className="pkg-hero-slider">
             <HeroSlider />
           </div>
         </div>
       </div>
 
       {/* Feature Grid */}
-      <div className="fts-features">
-        <div className="fts-features-grid">
+      <div className="pkg-features">
+        <div className="pkg-features-grid">
           {features.map((f, i) => {
             const Icon = f.Icon;
             return (
-            <div key={i} className="fts-feature-card">
-              <Icon className="fts-feature-icon" />
-              <h3 className="fts-feature-title">{f.title}</h3>
-              <p className="fts-feature-desc">{f.desc}</p>
+            <div key={i} className="pkg-feature-card">
+              <Icon className="pkg-feature-icon" />
+              <h3 className="pkg-feature-title">{f.title}</h3>
+              <p className="pkg-feature-desc">{f.desc}</p>
             </div>
             );
           })}
@@ -62,7 +62,7 @@ export default function FtsHome(): JSX.Element {
       </div>
 
       {/* Feature Banner */}
-      <div className="fts-features-banner">
+      <div className="pkg-features-banner">
         <p>
           And more — Code Scanner, Vendor Explorer, CSV Import/Export, Translation Portal, Webhooks.{' '}
           <Link to="/filament-translation-suite/features">See all features →</Link>
