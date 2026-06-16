@@ -22,6 +22,7 @@ import styles from './styles.module.css';
 function useNavbarItems(): NavbarItemConfig[] {
   const {pathname} = useLocation();
   const isFts = pathname.startsWith('/filament-translation-suite');
+  const isFwl = pathname.startsWith('/filament-white-label');
 
   if (isFts) {
     return [
@@ -30,6 +31,17 @@ function useNavbarItems(): NavbarItemConfig[] {
       {to: '/filament-translation-suite/features', label: 'Features', position: 'right'} as NavbarItemConfig,
       {to: '/filament-translation-suite/configuration', label: 'Configuration', position: 'right'} as NavbarItemConfig,
       {to: '/filament-translation-suite/pricing', label: 'Pricing', position: 'right'} as NavbarItemConfig,
+      {href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right'} as NavbarItemConfig,
+      {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right'} as NavbarItemConfig,
+    ];
+  }
+
+  if (isFwl) {
+    return [
+      {to: '/filament-white-label', label: 'Home', position: 'right'} as NavbarItemConfig,
+      {to: '/filament-white-label/getting-started', label: 'Guide', position: 'right'} as NavbarItemConfig,
+      {to: '/filament-white-label/features', label: 'Features', position: 'right'} as NavbarItemConfig,
+      {to: '/filament-white-label/configuration', label: 'Configuration', position: 'right'} as NavbarItemConfig,
       {href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right'} as NavbarItemConfig,
       {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right'} as NavbarItemConfig,
     ];

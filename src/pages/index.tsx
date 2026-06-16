@@ -18,6 +18,19 @@ function FtsTitleSvg() {
   );
 }
 
+function FwlTitleSvg() {
+  return (
+    <ThemedImage
+      sources={{
+        light: useBaseUrl('/img/filament-white-label/title.svg'),
+        dark: useBaseUrl('/img/filament-white-label/title-light.svg'),
+      }}
+      alt="Filament White Label"
+      className="pkg-card-title-svg"
+    />
+  );
+}
+
 const cardHover = (e: React.MouseEvent<HTMLAnchorElement>, on: boolean) => {
   const el = e.currentTarget;
   el.style.transform = on ? 'translateY(-3px)' : '';
@@ -50,7 +63,15 @@ export default function Home(): JSX.Element {
             onMouseOut={e => cardHover(e, false)}>
             <FtsTitleSvg />
             <p className="pkg-card-desc">Translate both file-based strings and database content — all from one Filament panel. Track coverage with a complete overview. Bulk-translate thousands of keys. Powered by DeepL, Google Translate, ChatGPT &amp; Claude.</p>
-            <span className="pkg-card-cta">View Documentation →</span>
+            <span className="pkg-card-cta">View Documentation &rarr;</span>
+          </Link>
+
+          <Link className="pkg-card" to="/filament-white-label"
+            onMouseOver={e => cardHover(e, true)}
+            onMouseOut={e => cardHover(e, false)}>
+            <FwlTitleSvg />
+            <p className="pkg-card-desc">Total panel rebranding — for you and every tenant. Logo, colors, fonts, layout, CSS, footer. All configurable from a clean Filament UI. No code.</p>
+            <span className="pkg-card-cta">View Documentation &rarr;</span>
           </Link>
 
           <div className="coming-soon">

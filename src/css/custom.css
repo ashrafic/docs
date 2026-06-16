@@ -178,7 +178,7 @@ html { scroll-behavior: smooth; }
 
 .home-packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 20px;
   max-width: 1040px;
   margin: 0 auto 4rem;
@@ -536,7 +536,7 @@ a.pkg-card, a.pkg-card:hover {
 
 .fts-hero-line1 {
   display: block;
-  font-size: clamp(2.8rem, 5.5vw, 4.5rem);
+  font-size: clamp(2.5rem, 5vw, 3.6rem);
   color: #12352f;
 }
 
@@ -544,7 +544,7 @@ a.pkg-card, a.pkg-card:hover {
 
 .fts-hero-line2 {
   display: block;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(3rem, 5.5vw, 4.2rem);
   color: #b88b4a;
 }
 
@@ -616,7 +616,7 @@ a.pkg-card, a.pkg-card:hover {
 
 /* ---- Hero Slider ---- */
 .hero-slider { position: relative; width: 100%; max-width: 640px; }
-.hero-slider-viewport { position: relative; width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(18,53,47,0.18); background: var(--ifm-background-color); line-height: 0; }
+.hero-slider-viewport { position: relative; width: 100%; border-radius: 16px; overflow: hidden; box-shadow: 0 20px 60px rgba(18,53,47,0.18); background: var(--ifm-background-color); line-height: 0; transition: height 0.4s ease; }
 [data-theme='dark'] .hero-slider-viewport { box-shadow: 0 20px 60px rgba(0,0,0,0.45); }
 .hero-slider-track { display: flex; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
 .hero-slide { flex: 0 0 100%; cursor: zoom-in; position: relative; }

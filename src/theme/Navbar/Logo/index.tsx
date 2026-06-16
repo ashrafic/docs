@@ -8,6 +8,7 @@ import ThemedImage from '@theme/ThemedImage';
 export default function NavbarLogo(): ReactNode {
   const {pathname} = useLocation();
   const isFts = pathname.startsWith('/filament-translation-suite');
+  const isFwl = pathname.startsWith('/filament-white-label');
 
   if (isFts) {
     return (
@@ -30,6 +31,34 @@ export default function NavbarLogo(): ReactNode {
               dark: useBaseUrl('/img/filament-translation-suite/title-dark.svg'),
             }}
             alt="Filament Translation Suite"
+            style={{height: 28}}
+          />
+        </Link>
+      </div>
+    );
+  }
+
+  if (isFwl) {
+    return (
+      <div className="navbar__brand">
+        <Link to="/" className="navbar__logo-link">
+          <div className="navbar__logo">
+            <ThemedImage
+              sources={{
+                light: useBaseUrl('/img/icon-logo.svg'),
+                dark: useBaseUrl('/img/icon-logo.svg'),
+              }}
+              alt="Ashrafic Labs"
+            />
+          </div>
+        </Link>
+        <Link to="/filament-white-label" className="navbar__logo-link">
+          <ThemedImage
+            sources={{
+              light: useBaseUrl('/img/filament-white-label/title.svg'),
+              dark: useBaseUrl('/img/filament-white-label/title-light.svg'),
+            }}
+            alt="Filament White Label"
             style={{height: 28}}
           />
         </Link>
