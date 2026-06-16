@@ -129,40 +129,40 @@ export default function FwlHome(): JSX.Element {
   return (
     <Layout title="Filament White Label" description="Total panel rebranding. For you and every tenant. No code.">
       {/* Hero */}
-      <div className="fts-hero">
-        <div className="fts-hero-inner">
-          <div className="fts-hero-text">
-            <h1 className="fts-hero-title">
-              <span className="fts-hero-line1">Filament</span>
-              <span className="fts-hero-line2">White Label</span>
+      <div className="pkg-hero">
+        <div className="pkg-hero-inner">
+          <div className="pkg-hero-text">
+            <h1 className="pkg-hero-title">
+              <span className="pkg-hero-line1">Filament</span>
+              <span className="pkg-hero-line2">White Label</span>
             </h1>
-            <p className="fts-hero-tagline">Total panel rebranding.<br/>For you and every tenant. No code.</p>
-            <p className="fts-hero-sub">Open source. MIT licensed.</p>
-            <p className="fts-hero-desc">
+            <p className="pkg-hero-tagline">Total panel rebranding.<br/>For you and every tenant. No code.</p>
+            <p className="pkg-hero-sub">Open source. MIT licensed.</p>
+            <p className="pkg-hero-desc">
               Logo, colors, fonts, layout, CSS, footer — every tenant gets their own brand. Or rebrand your own portal in a single-tenant setup. Install, add one line to your PanelProvider, done.
             </p>
-            <div className="fts-hero-actions">
-              <Link className="fts-btn fts-btn-brand" to="/filament-white-label/getting-started">Get Started</Link>
-              <Link className="fts-btn fts-btn-alt" to="/filament-white-label/features">Explore Features</Link>
-              <Link className="fts-btn fts-btn-alt" to="/filament-white-label/installation">Installation</Link>
+            <div className="pkg-hero-actions">
+              <Link className="pkg-btn pkg-btn-brand" to="/filament-white-label/getting-started">Get Started</Link>
+              <Link className="pkg-btn pkg-btn-alt" to="/filament-white-label/features">Explore Features</Link>
+              <Link className="pkg-btn pkg-btn-alt" to="/filament-white-label/installation">Installation</Link>
             </div>
           </div>
-          <div className="fts-hero-slider">
+          <div className="pkg-hero-slider">
             <FwlHeroSlider />
           </div>
         </div>
       </div>
 
       {/* Feature Grid */}
-      <div className="fts-features">
-        <div className="fts-features-grid">
+      <div className="pkg-features">
+        <div className="pkg-features-grid">
           {features.map((f, i) => {
             const Icon = f.Icon;
             return (
-            <div key={i} className="fts-feature-card">
-              <Icon className="fts-feature-icon" />
-              <h3 className="fts-feature-title">{f.title}</h3>
-              <p className="fts-feature-desc">{f.desc}</p>
+            <div key={i} className="pkg-feature-card">
+              <Icon className="pkg-feature-icon" />
+              <h3 className="pkg-feature-title">{f.title}</h3>
+              <p className="pkg-feature-desc">{f.desc}</p>
             </div>
             );
           })}
@@ -170,7 +170,7 @@ export default function FwlHome(): JSX.Element {
       </div>
 
       {/* Feature Banner */}
-      <div className="fts-features-banner">
+      <div className="pkg-features-banner">
         <p>
           And more — multi-panel support, footer with custom links, conditional white-labeling, static facade access, granular trait integration.{' '}
           <Link to="/filament-white-label/features">See all features &rarr;</Link>

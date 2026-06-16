@@ -32,7 +32,8 @@ function useNavbarItems(): NavbarItemConfig[] {
       {to: '/filament-translation-suite/configuration', label: 'Configuration', position: 'right'} as NavbarItemConfig,
       {to: '/filament-translation-suite/pricing', label: 'Pricing', position: 'right'} as NavbarItemConfig,
       {href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right'} as NavbarItemConfig,
-      {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right'} as NavbarItemConfig,
+      {href: 'https://packages.ashraficlabs.com', label: 'Our Packages', position: 'right'} as NavbarItemConfig,
+      {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right', className: 'github-icon'} as NavbarItemConfig,
     ];
   }
 
@@ -43,7 +44,8 @@ function useNavbarItems(): NavbarItemConfig[] {
       {to: '/filament-white-label/features', label: 'Features', position: 'right'} as NavbarItemConfig,
       {to: '/filament-white-label/configuration', label: 'Configuration', position: 'right'} as NavbarItemConfig,
       {href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right'} as NavbarItemConfig,
-      {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right'} as NavbarItemConfig,
+      {href: 'https://packages.ashraficlabs.com', label: 'Our Packages', position: 'right'} as NavbarItemConfig,
+      {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right', className: 'github-icon'} as NavbarItemConfig,
     ];
   }
 

@@ -57,8 +57,9 @@ const config: Config = {
         srcDark: '/img/ashrafic-labs-logo-horizontal-primary-light.svg',
       },
       items: [
+        { to: '/#packages', label: 'Docs', position: 'right' },
         { href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right' },
-        { to: '/#packages', label: 'Our Packages', position: 'right' },
+        { href: 'https://packages.ashraficlabs.com', label: 'Our Packages', position: 'right' },
         { href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right', className: 'github-icon' },
       ],
     },
