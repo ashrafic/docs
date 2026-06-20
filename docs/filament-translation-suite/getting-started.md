@@ -60,7 +60,7 @@ Manage all your translatable database models in one place. The suite auto-discov
 - Check translation status without opening each record
 
 :::tip Model Setup
-Make sure your models are properly configured. See [Model Configuration](/filament-translation-suite/configuration#model-configuration) and [Content Models feature guide](/filament-translation-suite/features/content-models).
+Make sure your models are properly configured. See the [Content Models](/filament-translation-suite/features/content-models) guide for setup instructions.
 :::
 
 ---

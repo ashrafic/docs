@@ -2,6 +2,46 @@
 title: Content Models
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+This guide walks through setting up translatable database content — model configuration, auto-discovery, form morphing, table columns, bulk translation, and common patterns.
+
+---
+
+## Model Setup
+
+Add the `HasTranslations` trait from `spatie/laravel-translatable` to your Eloquent model and define a `$translatable` array with the fields you want to translate:
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
+
+class Post extends Model
+{
+    use HasTranslations;
+
+    protected array $translatable = ['title', 'slug', 'body', 'seo_description'];
+}
+```
+
+For a model to be discovered and managed by the suite, it needs:
+
+1. **The `HasTranslations` trait** from `spatie/laravel-translatable`
+2. **A `$translatable` array** defining which fields are translatable
+3. **To live in `app/Models`** (or a subdirectory thereof)
+
+That's it. No extra configuration needed.
+
+:::tip Spatie Integration
+Filament Translation Suite stores all model translations via `spatie/laravel-translatable`. For advanced configuration options — fallback locales, query scoping, translation loading strategies — see the [official Spatie documentation](https://spatie.be/docs/laravel-translatable).
+:::
+
+---
 
 ## Auto-Discovery
 
@@ -34,21 +74,104 @@ Coverage is calculated per-locale by checking whether the first translatable fie
 
 ---
 
-## Editing Model Translations
+## Form Morphing
 
-Click any model card to browse its records and edit translations.
+Wrap translatable fields in one of the suite's morphing components to enable locale tabs on your resource forms:
 
-### Inline Editing
+<Tabs>
+<TabItem value="tabs" label="Tabs">
 
-Each translatable field in the model's Filament form automatically gets locale tabs thanks to [Form Morphing](/filament-translation-suite/features/form-morphing). You don't need to configure anything — the suite intercepts your existing form schema and adds translation capabilities.
+Each translatable field gets its own locale tabs — best for most forms:
 
-### Per-Record Translation
+```php
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableTabs;
 
-Navigate to a specific record in your model's resource (e.g., `Edit Post`) and every translatable field will show tabs for each configured locale.
+TranslatableTabs::make()
+    ->schema([
+        TextInput::make('title'),
+        RichEditor::make('body'),
+    ]);
+```
+
+![Form Tabs](/filament-translation-suite/assets/screenshots/translatable_fields_tabs.png)
+
+</TabItem>
+<TabItem value="fieldsets" label="Fieldsets">
+
+Each locale in a bordered fieldset — lighter visual grouping:
+
+```php
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableFieldsets;
+
+TranslatableFieldsets::make()
+    ->schema([
+        TextInput::make('title'),
+        RichEditor::make('body'),
+    ]);
+```
+
+![Form Fieldset](/filament-translation-suite/assets/screenshots/trans_fields_fieldset.png)
+
+</TabItem>
+<TabItem value="sections" label="Sections">
+
+Each locale in a collapsible section — good for long forms:
+
+```php
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableSections;
+
+TranslatableSections::make()
+    ->schema([
+        TextInput::make('title'),
+        RichEditor::make('body'),
+    ]);
+```
+
+![Form Sections](/filament-translation-suite/assets/screenshots/translatable_fields_sections.png)
+
+</TabItem>
+<TabItem value="stack" label="Stack">
+
+All locales displayed vertically — best for quick comparison:
+
+```php
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableStack;
+
+TranslatableStack::make()
+    ->schema([
+        TextInput::make('title'),
+        RichEditor::make('body'),
+    ]);
+```
+
+![Form Stack](/filament-translation-suite/assets/screenshots/translatable_fields_stack.png)
+
+</TabItem>
+</Tabs>
+
+For more details on how morphing works and all layout options, see the dedicated **[Form Morphing](/filament-translation-suite/features/form-morphing)** page.
 
 ---
 
-## Bulk Translation for Models
+## Table Columns
+
+Display translatable values in Filament tables with automatic locale detection:
+
+```php
+use Ashrafic\FilamentTranslationSuite\Components\TranslatableColumn;
+
+TranslatableColumn::make('title')
+    ->fallbackLocale('en'),
+```
+
+- Displays the value in the **current application locale**
+- Falls back to the configured `fallbackLocale` if the current locale has no translation
+- Fallback values are shown in *italics* with a locale badge (e.g., `(EN)`)
+- Shows **"Missing"** if no translation exists at all
+
+---
+
+## Bulk Translation
 
 Translating content model records one by one doesn't scale. The suite provides bulk translation for entire model tables.
 
@@ -65,20 +188,16 @@ Translating content model records one by one doesn't scale. The suite provides b
    - Preserves placeholders and pluralization patterns
    - Saves translations back to the database
 
-### Queue-Based Processing
+### Queue Configuration
 
-Bulk translation uses Laravel's queue system. The job is chunked into batches (configurable via `bulk_translation.chunk_size`) so it won't overwhelm your queue workers or API rate limits.
-
-You'll receive a Filament notification when the batch completes.
-
-:::tip
-Use a dedicated queue for translations to avoid blocking other background jobs:
 ```php
 'bulk_translation' => [
-    'queue' => 'translations',
+    'chunk_size' => 20,       // Records per job
+    'queue' => 'translations', // Dedicated queue name
 ],
 ```
-:::
+
+Bulk translation uses Laravel's queue system. The job is chunked into batches so it won't overwhelm your queue workers or API rate limits. You'll receive a Filament notification when the batch completes.
 
 ---
 
@@ -95,33 +214,52 @@ This gives you a single number to track translation health across your content l
 
 ---
 
-## Model Requirements
+## Common Patterns
 
-For a model to be discovered and managed by the suite, it needs:
+### Slug Fields
 
-1. **The `HasTranslations` trait** from `spatie/laravel-translatable`
-2. **A `$translatable` array** defining which fields are translatable
-3. **To live in `app/Models`** (or a subdirectory thereof)
-
-Example:
+Keep slug fields outside the morphing component to stay in the source locale only:
 
 ```php
-<?php
+TextInput::make('slug'),
+// ... other non-translatable fields
 
-namespace App\Models;
-
-use Illuminate\Database\Eloquent\Model;
-use Spatie\Translatable\HasTranslations;
-
-class Post extends Model
-{
-    use HasTranslations;
-
-    protected array $translatable = ['title', 'slug', 'body', 'seo_description'];
-}
+TranslatableTabs::make()
+    ->schema([
+        TextInput::make('title'),
+        RichEditor::make('body'),
+    ]);
 ```
 
-That's it. No extra configuration needed.
+### Grouped Fields
+
+Wrap multiple related fields in a single morphing component so they share locale controls:
+
+```php
+TranslatableStack::make()
+    ->schema([
+        TextInput::make('title'),
+        Textarea::make('excerpt'),
+        RichEditor::make('body'),
+    ]);
+```
+
+All three fields switch locales together, keeping the form compact.
+
+### Layout Control
+
+Morphing components support Filament's standard layout options:
+
+```php
+TranslatableStack::make()
+    ->columnSpanFull()
+    ->columns(2)
+    ->schema([
+        TextInput::make('title')->columnSpan(1),
+        TextInput::make('slug')->columnSpan(1),
+        RichEditor::make('body')->columnSpanFull(),
+    ]);
+```
 
 ---
 
@@ -151,6 +289,6 @@ Queue bulk translation for an entire model table:
 
 ## Next Steps
 
-- **[Form Morphing](/filament-translation-suite/features/form-morphing)** — Learn how locale tabs appear automatically in your forms
+- **[Form Morphing](/filament-translation-suite/features/form-morphing)** — Deep dive into all morphing modes and layout options
 - **[Machine Translation](/filament-translation-suite/features/machine-translation)** — Set up DeepL, Google, ChatGPT, and Claude
 - **[Health Dashboard](/filament-translation-suite/features/health-dashboard)** — Monitor content model coverage across your app
