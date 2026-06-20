@@ -3,43 +3,23 @@ title: Form Morphing
 ---
 
 
-## The Problem
+:::tip New to translatable models?
+For a step-by-step walkthrough — model setup, auto-discovery, form morphing, table columns, and bulk translation — see the **[Content Models](/filament-translation-suite/features/content-models)** guide.
+:::
 
-When using `spatie/laravel-translatable`, you traditionally have to manually configure locale tabs for every field:
-
-```php
-use Filament\Forms\Components\Tabs;
-
-Tabs::make('Translations')
-    ->tabs([
-        Tabs\Tab::make('English')
-            ->schema([
-                TextInput::make('title'),
-                RichEditor::make('body'),
-            ]),
-        Tabs\Tab::make('German')
-            ->schema([
-                TextInput::make('title'),
-                RichEditor::make('body'),
-            ]),
-        // ... repeat for every locale
-    ])
-```
-
-This is tedious, error-prone, and makes your form definitions explode in size.
-
----
-
-## The Solution
-
-Filament Translation Suite uses a morphing system that wraps your form components automatically. You write your forms exactly as before:
+Filament Translation Suite provides morphing components that wrap your translatable fields and render them with locale tabs, fieldsets, sections, or stacks. Wrap your fields in one of the suite's components:
 
 ```php
-TextInput::make('title')
-RichEditor::make('body')
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableTabs;
+
+TranslatableTabs::make()
+    ->schema([
+        TextInput::make('title'),
+        RichEditor::make('body'),
+    ]);
 ```
 
-The suite detects that the underlying model has `title` and `body` in its `$translatable` array, and automatically renders them with locale-aware UI.
+The suite detects that the underlying model has `title` and `body` in its `$translatable` array, and renders each field per locale inside the chosen layout.
 
 ---
 
@@ -47,23 +27,28 @@ The suite detects that the underlying model has `title` and `body` in its `$tran
 
 The suite provides four presentation modes for translatable fields:
 
-### 1. Tabs Mode (Default)
+### 1. Tabs Mode
 
-Each translatable field gets its own set of locale tabs. This is the default behavior and works well for most forms.
+Each translatable field gets its own set of locale tabs. Best for most forms.
 
 ```php
-// No extra code needed — happens automatically
-TextInput::make('title')
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableTabs;
+
+TranslatableTabs::make()
+    ->schema([
+        TextInput::make('title'),
+        RichEditor::make('body'),
+    ])
 ```
 
-### 2. Stack Mode
+### 2. Fieldsets Mode
 
-All locales are displayed as vertically stacked inputs. Great when you want to see all translations at once without clicking tabs.
+Each locale gets a fieldset border. A lighter visual grouping than sections.
 
 ```php
-use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableStack;
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableFieldsets;
 
-TranslatableStack::make()
+TranslatableFieldsets::make()
     ->schema([
         TextInput::make('title'),
         RichEditor::make('body'),
@@ -84,14 +69,14 @@ TranslatableSections::make()
     ])
 ```
 
-### 4. Fieldsets Mode
+### 4. Stack Mode
 
-Each locale gets a fieldset border. A lighter visual grouping than sections.
+All locales are displayed as vertically stacked inputs. Great when you want to see all translations at once without clicking tabs.
 
 ```php
-use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableFieldsets;
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableStack;
 
-TranslatableFieldsets::make()
+TranslatableStack::make()
     ->schema([
         TextInput::make('title'),
         RichEditor::make('body'),
@@ -116,31 +101,6 @@ TranslatableStack::make()
 All three fields will share the same locale tabs, keeping your form compact.
 
 ---
-
-## Per-Field Mode Override
-
-You can override the mode for individual fields:
-
-```php
-// Default is tabs
-TextInput::make('title')
-
-// Force stacked presentation
-TextInput::make('description')->translatableMode('stacked')
-
-// Hide all locales except source (useful for slugs)
-TextInput::make('slug')->translatableMode('hidden')
-```
-
-Available modes:
-
-| Mode | Behavior
-|------|----------
-| `tabs` | Each field gets locale tabs (default)
-| `stacked` | All locales visible vertically
-| `sections` | Each locale in a collapsible section
-| `fieldsets` | Each locale in a bordered fieldset
-| `hidden` | Only the source locale is shown
 
 ---
 
@@ -181,11 +141,11 @@ The default presentation — each field gets its own locale tabs:
 
 ![Translatable Fields Tabs](/filament-translation-suite/assets/screenshots/translatable_fields_tabs.png)
 
-### Stack Mode
+### Fieldsets Mode
 
-All locales displayed vertically for quick comparison:
+A lighter bordered grouping per locale:
 
-![Translatable Fields Stack](/filament-translation-suite/assets/screenshots/translatable_fields_stack.png)
+![Translatable Fields Fieldset](/filament-translation-suite/assets/screenshots/trans_fields_fieldset.png)
 
 ### Sections Mode
 
@@ -193,11 +153,11 @@ Each locale wrapped in a collapsible section:
 
 ![Translatable Fields Sections](/filament-translation-suite/assets/screenshots/translatable_fields_sections.png)
 
-### Fieldsets Mode
+### Stack Mode
 
-A lighter bordered grouping per locale:
+All locales displayed vertically for quick comparison:
 
-![Translatable Fields Fieldset](/filament-translation-suite/assets/screenshots/trans_fields_fieldset.png)
+![Translatable Fields Stack](/filament-translation-suite/assets/screenshots/translatable_fields_stack.png)
 
 ### Locale Switcher
 
@@ -231,16 +191,13 @@ This is especially useful in index tables where you want to show content in the 
 
 ## How It Works Under the Hood
 
-The suite registers a form fill hook that:
+When you wrap fields in a morphing component, the suite:
 
 1. Detects if the form's model uses `HasTranslations`
 2. Identifies which fields are in the model's `$translatable` array
-3. Wraps those fields in the configured morphing component
-4. Duplicates the field schema for each configured locale
-5. Maps each locale-specific field to the correct JSON path (`title->en`, `title->de`)
-6. Handles fill and save automatically
-
-All of this happens at runtime. Your form definitions stay clean and maintainable.
+3. Duplicates each translatable field for every configured locale
+4. Maps each locale-specific field to the correct JSON path (`title->en`, `title->de`)
+5. Handles fill and save automatically from the model's JSON column
 
 ---
 

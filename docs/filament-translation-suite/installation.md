@@ -11,7 +11,7 @@ Before installing, ensure your environment meets the following requirements:
 |-------------|--------
 | PHP | `^8.2`
 | Laravel | `^11.0`
-| Filament | `^5.0`
+| Filament | <code>^4.0 &#124;&#124; ^5.0</code>
 | spatie/laravel-translatable | `^6.0`
 
 :::tip Optional Dependencies
@@ -109,6 +109,58 @@ Once registered, a new **"Translation Suite"** navigation group will appear in y
 
 ---
 
+## Content Translation Setup
+
+To enable database content translation (blog posts, product descriptions, etc.), you need to configure your Eloquent models. The suite auto-discovers them and adds locale tabs to your Filament resource forms automatically.
+
+### 1. Configure Your Model
+
+Add the `HasTranslations` trait and define which fields are translatable:
+
+```php
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Translatable\HasTranslations;
+
+class Post extends Model
+{
+    use HasTranslations;
+
+    protected array $translatable = ['title', 'slug', 'body', 'seo_description'];
+}
+```
+
+That's it. The suite auto-discovers your model on the **Content Translation** page.
+
+> **Spatie integration:** Filament Translation Suite uses `spatie/laravel-translatable` for all model translation storage. For advanced configuration (fallback locales, query scoping, etc.), see the [official Spatie docs](https://spatie.be/docs/laravel-translatable).
+
+### 2. Apply Form Morphing Components
+
+Wrap translatable fields in one of the suite's morphing components to enable locale tabs on your resource forms:
+
+```php
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableTabs;
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableFieldsets;
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableSections;
+use Ashrafic\FilamentTranslationSuite\Forms\Components\TranslatableStack;
+
+// Tabs: each field gets its own locale tabs
+TranslatableTabs::make()
+    ->schema([
+        TextInput::make('title'),
+        RichEditor::make('body'),
+    ]);
+```
+
+:::tip Full Walkthrough
+For an end-to-end guide covering model discovery, form morphing modes, table columns, and bulk translation, see the **[Content Models](/filament-translation-suite/features/content-models)** feature page.
+:::
+
+---
+
 ## Quick Start Workflow
 
 ### 1. Import Existing Translations
@@ -175,7 +227,7 @@ app()->setLocale('de');
 
 - **[Configuration](/filament-translation-suite/configuration)** — Customize locales, providers, scanner paths, and more
 - **[File Translations](/filament-translation-suite/features/file-translations)** — Deep dive into UI string management
-- **[Content Models](/filament-translation-suite/features/content-models)** — Learn how model translations work
+- **[Content Models](/filament-translation-suite/features/content-models)** — Complete guide: model setup, form morphing, bulk translation
 - **[Machine Translation](/filament-translation-suite/features/machine-translation)** — Set up DeepL, Google, ChatGPT, and Claude
 
 ---
