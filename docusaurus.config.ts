@@ -43,6 +43,11 @@ const config: Config = {
         language: ['en'],
         indexDocs: true,
         indexPages: true,
+        searchContextByPaths: [
+          '/filament-translation-suite',
+          '/filament-white-label',
+        ],
+        useAllContextsWithNoSearchContext: true,
       },
     ],
   ],
