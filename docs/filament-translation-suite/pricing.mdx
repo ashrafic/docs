@@ -2,7 +2,7 @@
 title: Pricing & Licensing
 ---
 
-import { CHECKOUT_URL, PRODUCT_IDS, checkoutLink } from './_data';
+import { CHECKOUT_URLS } from './_data';
 import { ShieldCheck, MailCheck, Infinity } from 'lucide-react';
 
 
@@ -21,7 +21,7 @@ import { ShieldCheck, MailCheck, Infinity } from 'lucide-react';
     <li>1 year of updates</li>
   </ul>
   <p class="pricing-lifetime">Lifetime access — every version you receive is yours.</p>
-  <a href={checkoutLink(PRODUCT_IDS.solo)} target="_blank" class="pricing-cta pkg-btn pkg-btn-alt">Buy Solo</a>
+  <a href={CHECKOUT_URLS.solo} target="_blank" class="pricing-cta pkg-btn pkg-btn-alt">Buy Solo</a>
 </div>
 
 <div class="pricing-tier featured">
@@ -37,7 +37,7 @@ import { ShieldCheck, MailCheck, Infinity } from 'lucide-react';
     <li>1 year of updates</li>
   </ul>
   <p class="pricing-lifetime">Lifetime access — every version you receive is yours.</p>
-  <a href={checkoutLink(PRODUCT_IDS.agency)} target="_blank" class="pricing-cta pkg-btn pkg-btn-brand">Buy Agency</a>
+  <a href={CHECKOUT_URLS.agency} target="_blank" class="pricing-cta pkg-btn pkg-btn-brand">Buy Agency</a>
 </div>
 
 </div>
@@ -65,10 +65,15 @@ import { ShieldCheck, MailCheck, Infinity } from 'lucide-react';
     <img src="/img/payment/apple-pay.svg" alt="Apple Pay" class="card-logo" />
     <img src="/img/payment/google-pay.svg" alt="Google Pay" class="card-logo" />
     <img src="/img/payment/cash-app.svg" alt="Cash App" class="card-logo" />
+    <img src="/img/payment/alipay.svg" alt="Alipay" class="card-logo" />
+    <img src="/img/payment/wechat-pay.svg" alt="WeChat Pay" class="card-logo" />
   </div>
-  <p class="payment-compare-link">
-    Not seeing what you need? <a href={CHECKOUT_URL} target="_blank">Compare plans side by side &rarr;</a>
-  </p>
+
+<div class="powered-by">
+  <span class="powered-by-text">Powered by</span>
+  <img src="/img/payment/lemonsqueezy-badge.png" alt="LemonSqueezy" class="powered-by-logo" />
+</div>
+
   <p class="payment-legal-links">
     By purchasing, you agree to our <a href="https://packages.ashraficlabs.com/terms" target="_blank">Terms of Service</a> and <a href="https://packages.ashraficlabs.com/refunds" target="_blank">Refund Policy</a>.
   </p>
@@ -152,10 +157,15 @@ Because we don't believe in holding your code hostage. You paid for the tool —
 
 ## How to Buy
 
-Filament Translation Suite is sold through <a href={CHECKOUT_URL} target="_blank" class="polar-link"><img src="/img/payment/polar.svg" alt="Polar" class="polar-logo" /> Polar</a> — secure payment processing with instant license key delivery.
+Filament Translation Suite is sold through <strong>LemonSqueezy</strong> — secure payment processing with instant license key delivery.
+
+<div class="powered-by">
+  <span class="powered-by-text">Powered by</span>
+  <img src="/img/payment/lemonsqueezy-badge.png" alt="LemonSqueezy" class="powered-by-logo" />
+</div>
 
 1. **Choose** Solo or Agency above to purchase your license
-2. **Receive** your license key via email immediately after payment
+2. **Receive** your license key via email (or check the [License Portal](https://packages.ashraficlabs.com/portal)) immediately after payment
 3. **Install** via Composer using the [Ashrafic Labs Private Composer Registry](/filament-translation-suite/installation#composer-registry) with your license key
 
 For questions before purchasing, email us at [hello@ashraficlabs.com](mailto:hello@ashraficlabs.com).
@@ -164,7 +174,7 @@ For questions before purchasing, email us at [hello@ashraficlabs.com](mailto:hel
 
 ## License Portal
 
-A self-service portal is coming soon at [packages.ashraficlabs.com/portal](https://packages.ashraficlabs.com/portal) where you can view your license key, check your update status, and renew your license. Stay tuned.
+Visit the self-service portal at [packages.ashraficlabs.com/portal](https://packages.ashraficlabs.com/portal) to view your license key, check your update status, and renew your license.
 
 <p class="pricing-quote">
   <em>Built with precision. Priced fairly. Supported personally. Yours forever.</em>

@@ -287,18 +287,37 @@ a.pkg-card, a.pkg-card:hover {
   object-fit: contain;
 }
 
-.polar-logo {
+.lemonsqueezy-logo {
   width: 18px;
   height: 18px;
   vertical-align: text-bottom;
 }
 
-.polar-link {
+.powered-by {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1.2rem 0 2rem;
+}
+
+.powered-by-text {
+  font-size: 0.82rem;
+  color: var(--ifm-font-color-base);
+  letter-spacing: 0.02em;
+}
+
+.powered-by-logo {
+  height: 28px;
+  width: auto;
+}
+
+.lemonsqueezy-link {
   color: inherit;
   text-decoration: none;
 }
 
-.polar-link:hover {
+.lemonsqueezy-link:hover {
   text-decoration: underline;
 }
 
