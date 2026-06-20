@@ -26,7 +26,7 @@ Machine translation providers require their respective SDKs:
 ## Installation
 ### Composer Registry
 
-Filament Translation Suite is distributed through the **Ashrafic Labs Private Composer Registry**. After [purchasing your license](/filament-translation-suite/pricing), you'll receive a license key via email.
+Filament Translation Suite is distributed through the **Ashrafic Labs Private Composer Registry**. After [purchasing your license](/filament-translation-suite/pricing), you'll receive a license key via email. You can also find it anytime in the [License Portal](https://packages.ashraficlabs.com/portal).
 
 ### 1. Add the repository
 
@@ -186,5 +186,5 @@ Filament Translation Suite is a commercial product. See [Pricing & Licensing](/f
 
 - **Documentation**: You're reading it
 - **Website**: [ashraficlabs.com](https://ashraficlabs.com)
-- **Purchases & Licenses**: Manage through the [License Portal](https://packages.ashraficlabs.com/portal) (coming soon)
+- **Purchases & Licenses**: Manage through the [License Portal](https://packages.ashraficlabs.com/portal)
 - **Licensing**: See our [Pricing page](/filament-translation-suite/pricing)
