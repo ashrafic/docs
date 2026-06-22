@@ -30,24 +30,35 @@ Filament Translation Suite is distributed through the **Ashrafic Labs Private Co
 
 ### 1. Add the repository
 
+Add the registry to your `composer.json` by running this command:
+
+```bash
+composer config repositories.ashrafic composer https://packages.ashraficlabs.com/composer
+```
+
+Or manually add it to your `composer.json`:
+
 ```json
 "repositories": [
     {
+        "name": "ashrafic",
         "type": "composer",
-        "url": "https://packages.ashraficlabs.com"
+        "url": "https://packages.ashraficlabs.com/composer"
     }
 ]
 ```
 
 ### 2. Authenticate
 
-Use your license key for both username and password:
+Authenticate with the registry by running this command, using your email address and license key:
 
 ```bash
-composer config http-basic.packages.ashraficlabs.com YOUR_EMAIL YOUR_LICENSE_KEY
+composer config --auth http-basic.packages.ashraficlabs.com "YOUR_EMAIL_ADDRESS" "YOUR_LICENSE_KEY"
 ```
 
 ### 3. Install the package
+
+Install the package by running this command:
 
 ```bash
 composer require ashrafic/filament-translation-suite
@@ -64,7 +75,7 @@ This command will:
 2. Publish the migration files for the suite's database tables
 3. Publish Laravel's default language files to your `lang/` directory
 
-Run the migrations:
+Run the migrations by running this command:
 
 ```bash
 php artisan migrate
