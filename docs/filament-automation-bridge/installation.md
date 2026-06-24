@@ -7,11 +7,11 @@ title: Installation
 
 Before installing, ensure your environment meets the following requirements:
 
-| Requirement | Version |
+| Requirements | Version |
 |---|---|
 | PHP | `^8.2` |
 | Laravel | `^11.0` |
-| Filament | `^5.0` |
+| Filament | `^4.0` / `^5.0` |
 
 The package uses `spatie/laravel-webhook-server` for webhook delivery with retry support — this is installed automatically as a dependency.
 
@@ -49,6 +49,16 @@ Three tables are created:
 | `automation_templates` | Saved trigger configurations for reuse |
 
 ---
+
+## Translations
+
+The package includes English translations for all UI labels. Publish them to customize:
+
+```bash
+php artisan vendor:publish --tag=filament-automation-bridge-translations
+```
+
+This publishes translation files to `resources/lang/vendor/filament-automation-bridge/` where you can override any string.
 
 ---
 
