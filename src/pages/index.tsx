@@ -5,6 +5,19 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import ThemedImage from '@theme/ThemedImage';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+function FabTitleSvg() {
+  return (
+    <ThemedImage
+      sources={{
+        light: useBaseUrl('/img/filament-automation-bridge/title.svg'),
+        dark: useBaseUrl('/img/filament-automation-bridge/title-light.svg'),
+      }}
+      alt="Filament Automation Bridge"
+      className="pkg-card-title-svg"
+    />
+  );
+}
+
 function FtsTitleSvg() {
   return (
     <ThemedImage
@@ -71,6 +84,14 @@ export default function Home(): JSX.Element {
             onMouseOut={e => cardHover(e, false)}>
             <FwlTitleSvg />
             <p className="pkg-card-desc">Total panel rebranding — for you and every tenant. Logo, colors, fonts, layout, CSS, footer. All configurable from a clean Filament UI. No code.</p>
+            <span className="pkg-card-cta">View Documentation &rarr;</span>
+          </Link>
+
+          <Link className="pkg-card" to="/filament-automation-bridge"
+            onMouseOver={e => cardHover(e, true)}
+            onMouseOut={e => cardHover(e, false)}>
+            <FabTitleSvg />
+            <p className="pkg-card-desc">Turn any Eloquent model event into an automation trigger for Zapier, Make, or n8n. Six trigger types, visual condition builder, smart payload formatting — all without writing integration code.</p>
             <span className="pkg-card-cta">View Documentation &rarr;</span>
           </Link>
 

@@ -9,6 +9,7 @@ export default function NavbarLogo(): ReactNode {
   const {pathname} = useLocation();
   const isFts = pathname.startsWith('/filament-translation-suite');
   const isFwl = pathname.startsWith('/filament-white-label');
+  const isFab = pathname.startsWith('/filament-automation-bridge');
 
   if (isFts) {
     return (
@@ -59,6 +60,34 @@ export default function NavbarLogo(): ReactNode {
               dark: useBaseUrl('/img/filament-white-label/title-light.svg'),
             }}
             alt="Filament White Label"
+            style={{height: 28}}
+          />
+        </Link>
+      </div>
+    );
+  }
+
+  if (isFab) {
+    return (
+      <div className="navbar__brand">
+        <Link to="/" className="navbar__logo-link">
+          <div className="navbar__logo">
+            <ThemedImage
+              sources={{
+                light: useBaseUrl('/img/icon-logo.svg'),
+                dark: useBaseUrl('/img/icon-logo.svg'),
+              }}
+              alt="Ashrafic Labs"
+            />
+          </div>
+        </Link>
+        <Link to="/filament-automation-bridge" className="navbar__logo-link">
+          <ThemedImage
+            sources={{
+              light: useBaseUrl('/img/filament-automation-bridge/title.svg'),
+              dark: useBaseUrl('/img/filament-automation-bridge/title-light.svg'),
+            }}
+            alt="Filament Automation Bridge"
             style={{height: 28}}
           />
         </Link>

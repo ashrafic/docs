@@ -46,6 +46,7 @@ const config: Config = {
         searchContextByPaths: [
           '/filament-translation-suite',
           '/filament-white-label',
+          '/filament-automation-bridge',
         ],
         useAllContextsWithNoSearchContext: true,
       },
