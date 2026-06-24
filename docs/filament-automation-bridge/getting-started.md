@@ -33,6 +33,8 @@ Model Event → Condition Evaluation → Payload Builder → HMAC Sign → Queue
 
 ## Creating a Trigger
 
+![Triggers List](/filament-automation-bridge/assets/screenshots/triggers_list.png)
+
 Navigate to **Automation Bridge → Triggers** in your Filament sidebar. Click **Create** to open the trigger form.
 
 The form is organized into three logical sections:
@@ -50,6 +52,8 @@ Choose your trigger type, select a model, and configure when it fires.
 | **Manual** | No automatic firing. Trigger manually from a Filament resource action button. |
 | **Event** | Fire when any Laravel event class is dispatched — not tied to a specific model. |
 
+![Trigger Form — Configuration](/filament-automation-bridge/assets/screenshots/trigger_create_top.png)
+
 ### 2. "Only if these conditions match"
 
 Add conditions to filter which model instances trigger the automation. Conditions support **nine operators** (equals, not equals, contains, greater than, less than, is empty, is not empty, changed, changed to) and **AND/OR logic**:
@@ -64,11 +68,16 @@ The `changed` and `changed_to` operators compare the model's current value again
 Choose your destination and configure the payload:
 
 - **Destination type** — Zapier, Make, n8n, or Custom
+- **n8n Auth Mode** — API Key, Basic Auth, or Bearer Token (visible for n8n destinations)
 - **Destination URL** — the webhook URL from your automation platform
 - **Payload mode** — Summary (selected fields), All (every attribute), or Custom (JSON template)
 - **Field mapping** — pick and choose which model fields to include, including nested relations
 
+In the **Settings** section you can set the **HTTP Method** (GET, POST, PUT, PATCH, DELETE) and configure authentication secrets. See [Destinations](/filament-automation-bridge/features/destinations#authentication) for full auth details.
+
 The payload preview updates live as you configure your selections.
+
+![Trigger Form — Destination & Payload](/filament-automation-bridge/assets/screenshots/trigger_create_bottom.png)
 
 ---
 
@@ -81,6 +90,8 @@ Before activating a trigger, test your destination URL:
 3. Review the HTTP status, response body, and response time
 
 A successful test confirms the URL is reachable and your automation platform is ready to receive data.
+
+![Test Connection](/filament-automation-bridge/assets/screenshots/trigger_edit_top.png)
 
 ---
 

@@ -97,23 +97,56 @@ See [Payload Builder](/filament-automation-bridge/features/payloads#custom-templ
 
 ## Authentication
 
-Every destination type supports two authentication methods:
+Each destination type has a different authentication method. The trigger's secret field adapts based on the selected destination.
 
-### HMAC-SHA256 (default)
+### Zapier
 
-The bridge auto-generates a secret for each trigger (`hash('sha256', Str::random(64))`), stored encrypted in the database. Each outbound request includes:
+No auth headers are sent — Zapier relies on URL secrecy. The secret is still generated but used only for payload signing verification if you choose to validate on the receiving end.
+
+### Make (Integromat)
+
+Sends an API key via the `x-make-apikey` header. Use your Make.com API key as the secret value.
+
+### n8n — Multiple Auth Modes
+
+When the destination is n8n, an **n8n Auth Mode** selector appears with three options:
+
+| Mode | Secret Format | Header Sent |
+|---|---|---|
+| **API Key** (default) | Any API key string | `X-Api-Key: <secret>` |
+| **Basic Auth** | `username:password` | `Authorization: Basic <base64(secret)>` |
+| **Bearer Token** | JWT or Bearer token | `Authorization: Bearer <secret>` |
+
+Leave the secret blank to send no auth headers at all.
+
+### Custom Webhook / Zapier (HMAC-SHA256)
+
+For Custom and Zapier destinations, the bridge auto-generates a secret (`hash('sha256', Str::random(64))`), stored encrypted in the database. Each outbound request includes:
 
 ```
 X-Automation-Signature: sha256=<hex-encoded-hmac>
+X-Automation-Timestamp: <unix_time>
 X-Automation-Trigger-Id: 1
 X-Automation-Delivery-Id: <uuid>
 ```
 
-Verify the signature at your destination by computing the same HMAC of the raw request body with the shared secret.
+Verify the signature at your destination by computing the same HMAC of `timestamp.payload` with the shared secret.
 
-### Make API Key
+---
 
-Make destinations use the `x-make-apikey` header instead of HMAC. The trigger's secret is sent as the API key value.
+## HTTP Method
+
+Every trigger supports choosing the HTTP method used for the webhook call:
+
+| Method | Use Case |
+|---|---|
+| **POST** (default) | Standard webhook delivery |
+| **GET** | Fetch data or trigger parameter-based actions |
+| **PUT** | Full resource update at the destination |
+| **PATCH** | Partial resource update |
+| **DELETE** | Trigger a deletion at the destination |
+
+The method is configured in the **Settings** section of the trigger form.
 
 ---
 
@@ -122,9 +155,16 @@ Make destinations use the `x-make-apikey` header instead of HMAC. The trigger's 
 In the trigger form, the "Then send data to..." section:
 
 1. **Destination Type** — Select Zapier, Make, n8n, or Custom
-2. **Destination URL** — Paste the webhook URL from your automation platform
-3. **Request Timeout** — Seconds before the HTTP call times out (default: 5)
-4. **Max Retries** — Override the global retry count for this trigger (default: 3)
+2. **n8n Auth Mode** — (visible only for n8n) Choose API Key, Basic Auth, or Bearer Token
+3. **Destination URL** — Paste the webhook URL from your automation platform
+4. **Payload Mode** — Summary, All, or Custom
+
+In the **Settings** section:
+
+5. **HTTP Method** — GET, POST, PUT, PATCH, or DELETE
+6. **Secret** — Auth secret/API key/Bearer token (auto-generated if left blank)
+7. **Request Timeout** — Seconds before the HTTP call times out (default: 30)
+8. **Max Retries** — Override the global retry count for this trigger (default: 3)
 
 ---
 

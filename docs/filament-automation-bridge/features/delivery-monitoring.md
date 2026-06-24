@@ -34,6 +34,8 @@ Navigate to **Automation Bridge → Delivery Log** for a full table of every del
 
 ### Table Columns
 
+![Delivery Log](/filament-automation-bridge/assets/screenshots/delivery_log_list.png)
+
 | Column | Description |
 |---|---|
 | **UUID** | Unique identifier auto-generated on creation |
@@ -69,6 +71,8 @@ Click any delivery row to open a detailed slide-over panel:
 | **Metadata** | UUID, trigger name, status badge, duration, retry count, source, timestamps |
 
 Payload and response body are displayed as formatted JSON with copy-to-clipboard buttons.
+
+![Delivery Details](/filament-automation-bridge/assets/screenshots/delivery_log_details.png)
 
 ---
 

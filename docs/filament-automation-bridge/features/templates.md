@@ -43,6 +43,8 @@ Everything else — trigger type config, conditions, payload mode, field mapping
 
 ## Browsing Templates
 
+![Templates List](/filament-automation-bridge/assets/screenshots/templates_list.png)
+
 The Templates page shows:
 
 | Column | Description |
