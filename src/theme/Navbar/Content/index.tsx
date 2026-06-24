@@ -23,6 +23,7 @@ function useNavbarItems(): NavbarItemConfig[] {
   const {pathname} = useLocation();
   const isFts = pathname.startsWith('/filament-translation-suite');
   const isFwl = pathname.startsWith('/filament-white-label');
+  const isFab = pathname.startsWith('/filament-automation-bridge');
 
   if (isFts) {
     return [
@@ -43,6 +44,18 @@ function useNavbarItems(): NavbarItemConfig[] {
       {to: '/filament-white-label/getting-started', label: 'Guide', position: 'right'} as NavbarItemConfig,
       {to: '/filament-white-label/features', label: 'Features', position: 'right'} as NavbarItemConfig,
       {to: '/filament-white-label/configuration', label: 'Configuration', position: 'right'} as NavbarItemConfig,
+      {href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right'} as NavbarItemConfig,
+      {href: 'https://packages.ashraficlabs.com', label: 'Our Packages', position: 'right'} as NavbarItemConfig,
+      {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right', className: 'github-icon'} as NavbarItemConfig,
+    ];
+  }
+
+  if (isFab) {
+    return [
+      {to: '/filament-automation-bridge', label: 'Home', position: 'right'} as NavbarItemConfig,
+      {to: '/filament-automation-bridge/getting-started', label: 'Guide', position: 'right'} as NavbarItemConfig,
+      {to: '/filament-automation-bridge/features', label: 'Features', position: 'right'} as NavbarItemConfig,
+      {to: '/filament-automation-bridge/configuration', label: 'Configuration', position: 'right'} as NavbarItemConfig,
       {href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right'} as NavbarItemConfig,
       {href: 'https://packages.ashraficlabs.com', label: 'Our Packages', position: 'right'} as NavbarItemConfig,
       {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right', className: 'github-icon'} as NavbarItemConfig,
