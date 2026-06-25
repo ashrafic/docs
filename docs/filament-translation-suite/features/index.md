@@ -78,6 +78,10 @@ Bulk operations dispatch to Laravel's queue system. Whether you're translating 1
 
 The suite understands Laravel's translation conventions. `:name`, `:count`, `:attribute`, and `|` pluralization patterns are stripped before machine translation and restored after, ensuring your translated strings remain valid Laravel translation keys.
 
+### The Suite Itself Is Translatable
+
+All ~300 UI strings in the suite go through Laravel's `__()` helper. See **[Translatable UI](/filament-translation-suite/features/translatable-ui)** for the publish command and setup.
+
 ---
 
 ## Next Steps

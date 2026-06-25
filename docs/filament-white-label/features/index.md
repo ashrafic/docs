@@ -90,7 +90,7 @@ CSS sanitized against XSS. File uploads validated and tenant-scoped. Cache keys 
 
 ### Full i18n Support
 
-All ~230 UI strings are translatable. Publish with `vendor:publish --tag=filament-white-label-translations`, copy to any locale, and translate. Commands, labels, helper texts, options — everything goes through Laravel's `__()` helper.
+All ~230 UI strings go through Laravel's `__()` helper. See **[Translatable UI](/filament-white-label/features/translatable-ui)** for the publish command and setup.
 
 ---
 
@@ -103,7 +103,7 @@ All ~230 UI strings are translatable. Publish with `vendor:publish --tag=filamen
 | **Advanced** | [Advanced Settings](/filament-white-label/features/advanced-settings) | SPA mode, notifications, density, modals, transitions |
 | **Auth** | [Branded Login](/filament-white-label/features/branded-login) | Branded login page extending native Filament auth |
 | **DX** | [Integration Patterns](/filament-white-label/features/integration-patterns) | Macro, trait, facade, and manual integration |
-| **i18n** | Translation Support | All ~230 UI strings translatable. Publish and localize to any language. |
+| **i18n** | [Translatable UI](/filament-white-label/features/translatable-ui) | All ~230 UI strings translatable. Publish and localize to any language. |
 
 ---
 

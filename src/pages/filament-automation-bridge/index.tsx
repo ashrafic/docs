@@ -172,7 +172,7 @@ export default function FabHome(): JSX.Element {
       {/* Feature Banner */}
       <div className="pkg-features-banner">
         <p>
-          And more — Model Discovery, Field Schema Analysis, Sandbox Mode, Rate Limiting, Health Widget, Artisan Commands.{' '}
+          And more — Model Discovery, Field Schema Analysis, Sandbox Mode, Rate Limiting, Health Widget, Artisan Commands, translatable UI.{' '}
           <Link to="/filament-automation-bridge/features">See all features →</Link>
         </p>
       </div>

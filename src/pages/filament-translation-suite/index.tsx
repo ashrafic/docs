@@ -64,7 +64,7 @@ export default function FtsHome(): JSX.Element {
       {/* Feature Banner */}
       <div className="pkg-features-banner">
         <p>
-          And more — Code Scanner, Vendor Explorer, CSV Import/Export, Translation Portal, Webhooks.{' '}
+          And more — Code Scanner, Vendor Explorer, CSV Import/Export, Translation Portal, Webhooks, translatable UI.{' '}
           <Link to="/filament-translation-suite/features">See all features →</Link>
         </p>
       </div>

@@ -66,6 +66,12 @@ The bridge operates on three pillars:
 | Rate Limiting | Per-destination throttling to prevent overwhelming targets |
 | Encryption | Field-level payload encryption and secrets encrypted at rest |
 
+### Internationalization
+
+| Feature | Description |
+|---|---|
+| [Translatable UI](/filament-automation-bridge/features/translatable-ui) | All ~330 UI strings translatable. Publish and localize to any language. |
+
 ---
 
 ## Architecture Philosophy
@@ -77,3 +83,5 @@ The bridge operates on three pillars:
 **Security-first.** HMAC signing, SSRF prevention, HTTPS enforcement in production, encrypted secrets at rest, and per-destination rate limiting are all on by default. You don't opt in to security — you'd have to opt out.
 
 **Extensible.** Every trigger type implements a `TriggerContract` interface. Every condition operator implements a `ConditionOperator` interface. Every formatter implements a `PayloadFormatter` interface. Write your own, register them with the managers, and they integrate seamlessly.
+
+**Translatable.** All ~330 UI strings go through Laravel's `__()` helper. See **[Translatable UI](/filament-automation-bridge/features/translatable-ui)** for the publish command and setup.
