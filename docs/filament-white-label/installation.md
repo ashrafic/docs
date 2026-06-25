@@ -37,6 +37,16 @@ Run the migration:
 php artisan migrate
 ```
 
+### Translations
+
+All ~230 UI strings are translatable. Publish the language files (optional):
+
+```bash
+php artisan vendor:publish --tag=filament-white-label-translations
+```
+
+This copies `lang/en/filament-white-label.php` to your app's `lang/vendor/filament-white-label/` directory. Duplicate it for any locale.
+
 ---
 
 ## Tenant Model Setup

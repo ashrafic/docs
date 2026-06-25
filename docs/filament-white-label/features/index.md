@@ -88,6 +88,10 @@ One tenant, different branding per panel. Admin and app panels can look complete
 
 CSS sanitized against XSS. File uploads validated and tenant-scoped. Cache keys isolated per tenant + panel. All user content escaped before rendering.
 
+### Full i18n Support
+
+All ~230 UI strings are translatable. Publish with `vendor:publish --tag=filament-white-label-translations`, copy to any locale, and translate. Commands, labels, helper texts, options — everything goes through Laravel's `__()` helper.
+
 ---
 
 ## Feature Map
@@ -99,6 +103,7 @@ CSS sanitized against XSS. File uploads validated and tenant-scoped. Cache keys 
 | **Advanced** | [Advanced Settings](/filament-white-label/features/advanced-settings) | SPA mode, notifications, density, modals, transitions |
 | **Auth** | [Branded Login](/filament-white-label/features/branded-login) | Branded login page extending native Filament auth |
 | **DX** | [Integration Patterns](/filament-white-label/features/integration-patterns) | Macro, trait, facade, and manual integration |
+| **i18n** | Translation Support | All ~230 UI strings translatable. Publish and localize to any language. |
 
 ---
 
