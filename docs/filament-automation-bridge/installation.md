@@ -50,16 +50,6 @@ Three tables are created:
 
 ---
 
-## Translations
-
-The package includes English translations for all UI labels. Publish them to customize:
-
-```bash
-php artisan vendor:publish --tag=filament-automation-bridge-translations
-```
-
-This publishes translation files to `resources/lang/vendor/filament-automation-bridge/` where you can override any string.
-
 ---
 
 ## Queue Worker
