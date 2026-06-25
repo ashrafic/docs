@@ -172,7 +172,7 @@ export default function FwlHome(): JSX.Element {
       {/* Feature Banner */}
       <div className="pkg-features-banner">
         <p>
-          And more — multi-panel support, footer with custom links, conditional white-labeling, static facade access, granular trait integration.{' '}
+          And more — multi-panel support, footer with custom links, conditional white-labeling, static facade access, granular trait integration, full i18n support.{' '}
           <Link to="/filament-white-label/features">See all features &rarr;</Link>
         </p>
       </div>
