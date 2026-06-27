@@ -46,7 +46,7 @@ function useNavbarItems(): NavbarItemConfig[] {
       {to: '/filament-white-label/configuration', label: 'Configuration', position: 'right'} as NavbarItemConfig,
       {href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right'} as NavbarItemConfig,
       {href: 'https://packages.ashraficlabs.com', label: 'Our Packages', position: 'right'} as NavbarItemConfig,
-      {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right', className: 'github-icon'} as NavbarItemConfig,
+      {href: 'https://github.com/ashrafic/filament-white-label', label: 'GitHub', position: 'right', className: 'github-icon'} as NavbarItemConfig,
     ];
   }
 
@@ -58,7 +58,7 @@ function useNavbarItems(): NavbarItemConfig[] {
       {to: '/filament-automation-bridge/configuration', label: 'Configuration', position: 'right'} as NavbarItemConfig,
       {href: 'https://ashraficlabs.com', label: 'Main Site', position: 'right'} as NavbarItemConfig,
       {href: 'https://packages.ashraficlabs.com', label: 'Our Packages', position: 'right'} as NavbarItemConfig,
-      {href: 'https://github.com/ashrafic', label: 'GitHub', position: 'right', className: 'github-icon'} as NavbarItemConfig,
+      {href: 'https://github.com/ashrafic/filament-automation-bridge', label: 'GitHub', position: 'right', className: 'github-icon'} as NavbarItemConfig,
     ];
   }
 
