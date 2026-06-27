@@ -39,28 +39,9 @@ php artisan migrate
 
 ---
 
-## Tenant Model Setup
-
-Add the `HasWhiteLabel` trait to your tenant model. Skip this step if you don't use multi-tenancy — the package works with a single global settings record.
-
-```php
-use FilamentWhiteLabel\Traits\HasWhiteLabel;
-
-class Team extends Model
-{
-    use HasWhiteLabel;
-}
-```
-
-The trait:
-- Adds a `whiteLabelSettings()` polymorphic relationship
-- Auto-creates a default settings record when a tenant is created
-
----
-
 ## Panel Registration
 
-Add `->whiteLabel()` to your PanelProvider. Every feature is wired at once:
+Two pieces are required in your PanelProvider — both must be present for the settings page to appear in the navigation:
 
 ```php
 use Filament\Panel;
@@ -74,19 +55,47 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path('admin')
             ->tenant(Team::class)
-            ->whiteLabel() // <-- all branding, auto-wired
+            ->whiteLabel() // wires up branding across the panel
             ->resources([
-                \FilamentWhiteLabel\Resources\WhiteLabelSettingsResource::class,
+                \FilamentWhiteLabel\Resources\WhiteLabelSettingsResource::class, // adds the nav item
             ]);
     }
 }
 ```
 
-Once registered, a new **"White Label"** navigation item will appear in your Filament panel with three sub-pages:
+- `->whiteLabel()` enables white-label functionality — branding, CSS, layout resolution
+- `WhiteLabelSettingsResource` registers the settings page — **without it, no navigation item appears**
+
+Once both are registered, a new **"White Label"** navigation item will appear in your Filament panel with three sub-pages:
 
 - **Brand** — Logo, colors, fonts, CSS theme, custom CSS
 - **Layout** — Navigation, sidebar, breadcrumbs, dimensions, footer
 - **Advanced** — SPA mode, notifications, density, modals, transitions
+
+---
+
+## Tenant Model Setup (Optional)
+
+This step is **optional**. Add the `HasWhiteLabel` trait to your tenant model only if you want default white label settings to be **eagerly created** the moment a new tenant is created.
+
+Skip this step if:
+- You don't use multi-tenancy — the package works with a single global settings record
+- You prefer defaults to be created lazily (see below)
+
+```php
+use FilamentWhiteLabel\Traits\HasWhiteLabel;
+
+class Team extends Model
+{
+    use HasWhiteLabel;
+}
+```
+
+The trait:
+- Adds a `whiteLabelSettings()` polymorphic relationship
+- Hooks into the `created` event to auto-create a default settings record when a tenant is created
+
+**Without the trait**, default white label settings for a tenant are **created lazily** — only when the White Label page is first visited for that tenant. Nothing breaks either way; choose based on whether you need the settings row to exist before the page is ever opened (e.g., for API access or custom queries).
 
 ---
 
