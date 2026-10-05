@@ -6,6 +6,8 @@ All FedEx settings live in the Bagisto admin panel — no config files to edit, 
 
 **Location:** Admin → **Configure → Sales → Shipping Methods → FedEx Shipping**
 
+![FedEx Shipping configuration](/bagisto-fedex-shipping/assets/screenshots/admin-configure.png)
+
 Most fields are **channel-based**, so multi-channel stores can quote and ship differently per channel.
 
 :::warning Configure the Shipping Origin First

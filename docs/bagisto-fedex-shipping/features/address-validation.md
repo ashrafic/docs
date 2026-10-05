@@ -5,8 +5,6 @@ sidebar_position: 6
 
 FedEx maintains a database of every deliverable address in the US. The package exposes it two ways — a command for one-off checks and a service for your own code.
 
-![Address validation](/bagisto-fedex-shipping/assets/screenshots/address-validation.png)
-
 ## From the Command Line
 
 ```bash

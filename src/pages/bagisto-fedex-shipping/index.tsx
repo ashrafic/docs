@@ -5,12 +5,9 @@ import HeroSlider from '@site/src/components/HeroSlider';
 import { DollarSign, CalendarClock, Boxes, Tags, PackageSearch, MapPinCheck, Timer, LayoutList, ShieldCheck } from 'lucide-react';
 
 const slides = [
-  { src: '/bagisto-fedex-shipping/assets/screenshots/checkout-rates.png', alt: 'Live FedEx rates at checkout' },
-  { src: '/bagisto-fedex-shipping/assets/screenshots/label-create.png', alt: 'Create FedEx label from the order screen' },
-  { src: '/bagisto-fedex-shipping/assets/screenshots/admin-shipments.png', alt: 'FedEx Shipments admin page' },
-  { src: '/bagisto-fedex-shipping/assets/screenshots/tracking.png', alt: 'Tracking status and scan events' },
-  { src: '/bagisto-fedex-shipping/assets/screenshots/config-page.png', alt: 'FedEx configuration' },
-  { src: '/bagisto-fedex-shipping/assets/screenshots/address-validation.png', alt: 'Address validation' },
+  { src: '/bagisto-fedex-shipping/assets/screenshots/checkout.png', alt: 'Live FedEx rates at checkout' },
+  { src: '/bagisto-fedex-shipping/assets/screenshots/order-details.png', alt: 'FedEx fulfillment on the admin order screen' },
+  { src: '/bagisto-fedex-shipping/assets/screenshots/admin-configure.png', alt: 'FedEx Shipping configuration' },
 ];
 
 const features = [

@@ -5,8 +5,6 @@ sidebar_position: 4
 
 Turn a paid order into a FedEx shipment without leaving the admin panel.
 
-![Label creation](/bagisto-fedex-shipping/assets/screenshots/label-create.png)
-
 ## Creating a Label
 
 1. Open the order under **Sales → Orders** and click **Create FedEx Label**

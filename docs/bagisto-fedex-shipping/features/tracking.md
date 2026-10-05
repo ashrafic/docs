@@ -5,8 +5,6 @@ sidebar_position: 5
 
 Every label comes with one-click tracking pulled live from the FedEx Track API.
 
-![Tracking](/bagisto-fedex-shipping/assets/screenshots/tracking.png)
-
 ## Refreshing Tracking
 
 On any label — the order screen or the [FedEx Shipments page](/bagisto-fedex-shipping/features/admin-shipments) — click **Refresh Tracking**. The package calls `/track/v1/tracking` with detailed scans enabled and normalizes the response.

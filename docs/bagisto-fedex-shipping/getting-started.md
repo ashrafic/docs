@@ -41,6 +41,8 @@ See [Live Rates](/bagisto-fedex-shipping/features/live-rates) for the full behav
 
 Open any order and click **Create FedEx Label**. Pick a service, confirm, and the PDF label is generated and stored privately — the tracking number is written straight onto the Bagisto shipment.
 
+![Admin order fulfillment](/bagisto-fedex-shipping/assets/screenshots/order-details.png)
+
 - **Download** labels anytime from the order or the FedEx Shipments page
 - **Void** labels you no longer need
 - **Refresh Tracking** pulls the latest status and scan events from FedEx

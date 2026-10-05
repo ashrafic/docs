@@ -5,7 +5,7 @@ sidebar_position: 2
 
 The moment a customer reaches the shipping step of checkout, the package queries the FedEx Rate API and presents one option per allowed service — priced in real time.
 
-![Checkout rates](/bagisto-fedex-shipping/assets/screenshots/checkout-rates.png)
+![Live FedEx rates at checkout](/bagisto-fedex-shipping/assets/screenshots/checkout.png)
 
 ## What the Customer Sees
 

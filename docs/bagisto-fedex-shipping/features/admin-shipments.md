@@ -5,8 +5,6 @@ sidebar_position: 7
 
 Every label you create lives in one place: **Sales → FedEx Shipments**.
 
-![FedEx Shipments page](/bagisto-fedex-shipping/assets/screenshots/admin-shipments.png)
-
 ## What's on the Page
 
 A paginated list of all FedEx shipments, newest first:
