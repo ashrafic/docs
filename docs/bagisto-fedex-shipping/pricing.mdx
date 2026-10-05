@@ -1,0 +1,182 @@
+---
+title: Pricing & Licensing
+---
+
+import { CHECKOUT_URLS } from './_data';
+import { ShieldCheck, MailCheck, Infinity } from 'lucide-react';
+
+
+<div class="pricing-grid">
+
+<div class="pricing-tier">
+  <div class="pricing-badge">SOLO</div>
+  <div class="pricing-price">$49<span class="period"> one-time</span></div>
+  <p class="pricing-tier-desc">For individual developers and single stores.</p>
+  <ul class="pricing-features">
+    <li>1 project</li>
+    <li>Unlimited products &amp; orders</li>
+    <li>Live rates, labels, tracking</li>
+    <li>All 11 FedEx service types</li>
+    <li>Email support</li>
+    <li>Lifetime updates</li>
+  </ul>
+  <p class="pricing-lifetime">Buy once — every future version is yours.</p>
+  <a href={CHECKOUT_URLS.solo} target="_blank" class="pricing-cta pkg-btn pkg-btn-alt">Buy Solo</a>
+</div>
+
+<div class="pricing-tier featured">
+  <div class="pricing-badge">AGENCY</div>
+  <div class="pricing-price">$139<span class="period"> one-time</span></div>
+  <p class="pricing-tier-desc">For agencies and teams building multiple stores.</p>
+  <ul class="pricing-features">
+    <li>Unlimited projects</li>
+    <li>Unlimited products &amp; orders</li>
+    <li>Live rates, labels, tracking</li>
+    <li>All 11 FedEx service types</li>
+    <li>Priority email support</li>
+    <li>Lifetime updates</li>
+  </ul>
+  <p class="pricing-lifetime">Buy once — every future version is yours.</p>
+  <a href={CHECKOUT_URLS.agency} target="_blank" class="pricing-cta pkg-btn pkg-btn-brand">Buy Agency</a>
+</div>
+
+</div>
+
+<div class="payment-footer">
+  <div class="payment-trust">
+    <div class="payment-trust-item">
+      <ShieldCheck size={15} />
+      <span>Secure checkout</span>
+    </div>
+    <div class="payment-trust-item">
+      <MailCheck size={15} />
+      <span>Instant license key delivery</span>
+    </div>
+    <div class="payment-trust-item">
+      <Infinity size={15} />
+      <span>Lifetime access to your code</span>
+    </div>
+  </div>
+  <div class="payment-cards">
+    <img src="/img/payment/visa.svg" alt="Visa" class="card-logo" />
+    <img src="/img/payment/mastercard.svg" alt="Mastercard" class="card-logo" />
+    <img src="/img/payment/amex.svg" alt="American Express" class="card-logo" />
+    <img src="/img/payment/discover.svg" alt="Discover" class="card-logo" />
+    <img src="/img/payment/apple-pay.svg" alt="Apple Pay" class="card-logo" />
+    <img src="/img/payment/google-pay.svg" alt="Google Pay" class="card-logo" />
+  </div>
+
+<div class="powered-by">
+  <span class="powered-by-text">Powered by</span>
+  <img src="/img/payment/polar-mark-dark.png" alt="Polar" className="powered-by-logo" />
+  <span class="powered-by-text">Polar</span>
+</div>
+
+  <p class="payment-legal-links">
+    By purchasing, you agree to our <a href="https://packages.ashraficlabs.com/terms" target="_blank">Terms of Service</a> and <a href="https://packages.ashraficlabs.com/refunds" target="_blank">Refund Policy</a>.
+  </p>
+</div>
+
+<div class="pricing-note">
+  <p class="pricing-note-text">
+    <strong>One payment. Yours forever.</strong> Every future update is included — no subscriptions, no renewals, no surprises.<br/>
+    Buy once, and every version we ever release is yours to download and keep.
+  </p>
+</div>
+
+---
+
+## What's Included
+
+Every license includes:
+
+- **Lifetime access** — every version we ever release is yours to keep, forever
+- **All features** — no feature gating, no "pro" tiers, no upsells
+- **All 11 FedEx service types** — Ground, Home Delivery, 2Day, Overnight, International and more
+- **Complete fulfillment toolkit** — live rates, shipping labels, tracking, and address validation
+- **Unlimited products & orders** — no per-order, per-label, or per-rate limits from us
+- **Unlimited users** — everyone on your team can use the package
+
+You only pay FedEx for the labels you actually print. We never markup shipping costs.
+
+---
+
+## License Terms
+
+### Project-Based Licensing
+
+- **Solo** — 1 project. A single store — however many domains, servers, or environments you need to run it.
+- **Agency** — Unlimited projects
+
+Local development, staging, and CI environments are **unlimited** and do not count toward your project limit.
+
+### Lifetime, No Renewals
+
+This is the part that matters:
+
+- **You buy once, you own it forever.** Every version we release — today and in the future — is yours to download and use indefinitely. No subscription trap. No renewal emails. No "your license expired" popups in production.
+- **All future updates included** — every feature, fix, and new FedEx API capability we ship
+- **Email support** — questions, bug reports, and feature requests
+- **Priority support** — Agency licenses get faster response times
+
+There is nothing to renew. Your code never stops working, and you never pay us again.
+
+### Source Code
+
+Bagisto FedEx Shipping is distributed as compiled PHP source. You have full access to read and modify the code for your own use within licensed projects. Redistribution, resale, or use in unlicensed projects is prohibited.
+
+---
+
+## Frequently Asked Questions
+
+### What counts as a "project"?
+
+A project is a single store or product. If you build `store-a.com` and `store-b.com` as two separate Bagisto installations, that's two projects. A single Bagisto multichannel setup serving one brand is one project — however many domains or servers it runs on.
+
+### Can I upgrade from Solo to Agency?
+
+Yes. Contact us at [hello@ashraficlabs.com](mailto:hello@ashraficlabs.com) and we'll credit your existing license toward an Agency plan.
+
+### Do I need a FedEx shipping account?
+
+Not to get started. Free test keys from the [FedEx Developer Portal](https://developer.fedex.com) work immediately against the sandbox — no FedEx account or credit card needed. A FedEx shipping account is only required to move to production (real prices, real labels).
+
+### Do I pay for FedEx API usage?
+
+No. FedEx's rate, track, and address validation APIs are free to use. Labels are billed by FedEx at your negotiated rates when you print them — we never add anything on top.
+
+### What does "lifetime" actually mean?
+
+Exactly what it says. Pay once and every version of the package — including all future releases — is yours forever. There is no update window that expires and no renewal to remember.
+
+### Why not a subscription?
+
+Because we don't believe in holding your code hostage. You paid for the tool — you should be able to use it forever. Selling lifetime licenses keeps things simple for you and keeps us honest about earning your purchases with real improvements.
+
+---
+
+## How to Buy
+
+Bagisto FedEx Shipping is sold through <strong>Polar</strong> — secure checkout with instant license key delivery.
+
+<div class="powered-by">
+  <span class="powered-by-text">Powered by</span>
+  <img src="/img/payment/polar-mark-dark.png" alt="Polar" className="powered-by-logo" />
+  <span class="powered-by-text">Polar</span>
+</div>
+
+1. **Choose** Solo or Agency above to purchase your license
+2. **Receive** your license key immediately after payment (email + confirmation page)
+3. **Install** via Composer using the [Ashrafic Labs Private Composer Registry](/bagisto-fedex-shipping/installation#composer-registry) with your license key
+
+For questions before purchasing, email us at [hello@ashraficlabs.com](mailto:hello@ashraficlabs.com).
+
+---
+
+## License Portal
+
+Visit the self-service portal at [packages.ashraficlabs.com/portal](https://packages.ashraficlabs.com/portal) to view your license key and manage your license.
+
+<p class="pricing-quote">
+  <em>Ship with confidence. Priced once. Yours forever.</em>
+</p>
