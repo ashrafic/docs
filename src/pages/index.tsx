@@ -44,6 +44,19 @@ function FwlTitleSvg() {
   );
 }
 
+function BfsTitleSvg() {
+  return (
+    <ThemedImage
+      sources={{
+        light: useBaseUrl('/img/bagisto-fedex-shipping/title.svg'),
+        dark: useBaseUrl('/img/bagisto-fedex-shipping/title-light.svg'),
+      }}
+      alt="Bagisto FedEx Shipping"
+      className="pkg-card-title-svg"
+    />
+  );
+}
+
 const cardHover = (e: React.MouseEvent<HTMLAnchorElement>, on: boolean) => {
   const el = e.currentTarget;
   el.style.transform = on ? 'translateY(-3px)' : '';
@@ -92,6 +105,14 @@ export default function Home(): JSX.Element {
             onMouseOut={e => cardHover(e, false)}>
             <FabTitleSvg />
             <p className="pkg-card-desc">Turn any Eloquent model event into an automation trigger for Zapier, Make, or n8n. Six trigger types, visual condition builder, smart payload formatting — all without writing integration code.</p>
+            <span className="pkg-card-cta">View Documentation &rarr;</span>
+          </Link>
+
+          <Link className="pkg-card" to="/bagisto-fedex-shipping"
+            onMouseOver={e => cardHover(e, true)}
+            onMouseOut={e => cardHover(e, false)}>
+            <BfsTitleSvg />
+            <p className="pkg-card-desc">Live FedEx rates at checkout, shipping labels, tracking and address validation for Bagisto 2.x — built on the modern FedEx REST API. Buy once, own forever.</p>
             <span className="pkg-card-cta">View Documentation &rarr;</span>
           </Link>
 
