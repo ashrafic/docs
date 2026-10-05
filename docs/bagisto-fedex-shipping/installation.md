@@ -10,7 +10,7 @@ Before installing, ensure your environment meets the following requirements:
 | Requirement | Version
 |-------------|--------
 | PHP | `^8.3`
-| Laravel | `^11.0 &#124; ^12.0`
+| Laravel | <code>^11.0 &#124; ^12.0</code>
 | Bagisto | `2.2` or newer
 | FedEx credentials | Free test keys — no FedEx account or credit card needed
 
