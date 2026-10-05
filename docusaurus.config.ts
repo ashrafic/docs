@@ -47,6 +47,7 @@ const config: Config = {
           '/filament-translation-suite',
           '/filament-white-label',
           '/filament-automation-bridge',
+          '/bagisto-fedex-shipping',
         ],
         useAllContextsWithNoSearchContext: true,
       },

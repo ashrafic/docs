@@ -10,6 +10,7 @@ export default function NavbarLogo(): ReactNode {
   const isFts = pathname.startsWith('/filament-translation-suite');
   const isFwl = pathname.startsWith('/filament-white-label');
   const isFab = pathname.startsWith('/filament-automation-bridge');
+  const isBfs = pathname.startsWith('/bagisto-fedex-shipping');
 
   if (isFts) {
     return (
@@ -88,6 +89,34 @@ export default function NavbarLogo(): ReactNode {
               dark: useBaseUrl('/img/filament-automation-bridge/title-light.svg'),
             }}
             alt="Filament Automation Bridge"
+            style={{height: 28}}
+          />
+        </Link>
+      </div>
+    );
+  }
+
+  if (isBfs) {
+    return (
+      <div className="navbar__brand">
+        <Link to="/" className="navbar__logo-link">
+          <div className="navbar__logo">
+            <ThemedImage
+              sources={{
+                light: useBaseUrl('/img/icon-logo.svg'),
+                dark: useBaseUrl('/img/icon-logo.svg'),
+              }}
+              alt="Ashrafic Labs"
+            />
+          </div>
+        </Link>
+        <Link to="/bagisto-fedex-shipping" className="navbar__logo-link">
+          <ThemedImage
+            sources={{
+              light: useBaseUrl('/img/bagisto-fedex-shipping/title.svg'),
+              dark: useBaseUrl('/img/bagisto-fedex-shipping/title-light.svg'),
+            }}
+            alt="Bagisto FedEx Shipping"
             style={{height: 28}}
           />
         </Link>
